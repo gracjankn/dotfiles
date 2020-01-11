@@ -41,3 +41,9 @@ let g:lightline = {
     \   'gitbranch': 'gitbranch#name'
     \ },
 \ }
+
+aug i3config_ft_detection
+  au!
+  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+  au BufNewFile,BufRead ~/dotfiles/i3/.config/i3/config set filetype=i3config
+aug end
