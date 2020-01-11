@@ -179,7 +179,7 @@ smart_borders on
 
 exec --no-startup-id xwallpaper --stretch ~/Wallpaper\ —\ Street.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+exec_always --no-startup-id xrdb ~/.Xresources
 
 # ~~~~~~~~~~~~~~~~~~~~~~
 #  Application Settings
