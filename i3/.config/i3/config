@@ -180,4 +180,5 @@ bar {
         status_command i3status
 }
 
+# Change border style
 new_window none
