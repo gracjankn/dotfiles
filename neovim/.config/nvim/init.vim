@@ -7,7 +7,7 @@ call plug#begin()
 	" Status bar
 	Plug 'itchyny/lightline.vim'
 
-	" Provides name of current git repo (for use with other plugins - like Lightline)
+	" Provides name of current git branch (for use with other plugins - like Lightline)
 	Plug 'itchyny/vim-gitbranch'
 
 	" Comment a line with gcc or visual selection with gc
@@ -33,10 +33,11 @@ set termguicolors
 
 let g:lightline = {
 \ 'colorscheme': 'snazzy',
+\ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'gitbranch#name'
+    \ },
 \ }
-
-" Syntax for i3 config
-aug i3config_ft_detection
-  au!
-  au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
-aug end
