@@ -13,6 +13,7 @@ alias c='clear'
 # Edit configs
 alias cfz='nvim $HOME/.zshrc'
 alias cfv='nvim $HOME/.config/nvim/init.vim'
+alias cf3='nvim $HOME/.config/i3/config'
 alias cft='nvim $HOME/.tmux.conf'
 
 # Brew aliases
