@@ -105,8 +105,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "Terminal"
-set $ws2 "Browser"
+set $ws1 "Browser"
+set $ws2 "Terminal"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -189,3 +189,13 @@ new_window none
 # ~~~~~~~~~~~
 
 exec --no-startup-id xwallpaper --stretch ~/Wallpaper\ —\ Street.jpg
+
+# ~~~~~~~~~~~~~~~~~~~~~~
+#  Application Settings
+# ~~~~~~~~~~~~~~~~~~~~~~
+
+# Workspace Browser
+assign [class="firefox"] workspace $ws1
+
+# Workspace Terminal
+assign [class="Termite"] workspace $ws2
