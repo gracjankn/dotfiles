@@ -17,6 +17,8 @@ alias cf3='nvim $HOME/dotfiles/i3/.config/i3/config'
 alias cft='nvim $HOME/dotfiles/tmux/.tmux.conf'
 
 # Brew aliases
+if [[ "$OSTYPE" = darwin* ]]; then
+
 alias bs='brew search'
 alias bi='brew install'
 alias bci='brew cask install'
@@ -30,3 +32,5 @@ alias bch='brew cask home'
 alias bl='brew list'
 alias bcl='brew cask list'
 alias bc='brew update;brew upgrade;brew cask upgrade;brew cleanup;brew doctor'
+
+fi
