@@ -36,3 +36,34 @@ alias br='brew reinstall'
 alias bcr='brew cask reinstall'
 
 fi
+
+# for ZSH
+case "$OSTYPE" in
+darwin*)
+# macOS
+
+# Brew aliases    
+
+alias bs='brew search'
+alias bi='brew install'
+alias bci='brew cask install'
+alias bf='brew info'
+alias bcf='brew cask info'
+alias bu='brew uninstall'
+alias bcu='brew cask uninstall'
+alias bz='brew cask zap'
+alias bh='brew home'
+alias bch='brew cask home'
+alias bl='brew list'
+alias bcl='brew cask list'
+alias bc='brew update;brew upgrade;brew cask upgrade;brew cleanup;brew doctor'
+alias br='brew reinstall'
+
+;;
+linux*)
+# Linux
+
+alias p='sudo pacman -'
+alias y='yaourt -'
+;;
+esac
