@@ -63,7 +63,7 @@ alias br='brew reinstall'
 linux*)
 # Linux
 
-alias p='sudo pacman -'
-alias y='yaourt -'
+alias p='sudo pacman'
+alias y='yaourt'
 ;;
 esac
