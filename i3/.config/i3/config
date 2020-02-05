@@ -164,7 +164,8 @@ exec_always --no-startup-id xrdb ~/.Xresources
 
 # Apps
 bindsym $hyper+Return exec --no-startup-id i3-sensible-terminal
-bindsym $hyper+f exec --no-startup-id firefox
+bindsym $hyper+b exec --no-startup-id brave
+# bindsym $hyper+f exec --no-startup-id firefox
 bindsym $hyper+t exec --no-startup-id telegram-desktop
 bindsym $hyper+m exec --no-startup-id multimc
 
@@ -174,6 +175,7 @@ bindsym $hyper+m exec --no-startup-id multimc
 # ~~~~~~~~~~~~~~~~~~~~~~
 
 # Workspace Browser
+assign [class="Brave"] workspace $ws1
 assign [class="firefox"] workspace $ws1
 
 # Workspace Terminal
