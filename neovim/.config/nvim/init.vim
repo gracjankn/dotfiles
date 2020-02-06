@@ -1,8 +1,9 @@
 "Load plugins
 call plug#begin()
 
-	" Color scheme
+	" Colors
 	Plug 'connorholyday/vim-snazzy'
+	Plug 'arcticicestudio/nord-vim'
 
 	" Status bar
 	Plug 'itchyny/lightline.vim'
@@ -28,7 +29,7 @@ call plug#end()
 set nu rnu
 
 "Make colors look cool
-colorscheme snazzy
+colorscheme nord
 set termguicolors
 
 let g:lightline = {

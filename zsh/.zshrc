@@ -5,6 +5,7 @@ unsetopt correct_all
 
 # Basic aliases
 alias ls='ls -Alh'
+alias tree='tree -afC'
 alias rm='rm -rdf'
 alias v='nvim'
 alias g='git'
@@ -16,28 +17,7 @@ alias cfv='nvim $HOME/dotfiles/neovim/.config/nvim/init.vim'
 alias cfi='nvim $HOME/dotfiles/i3/.config/i3/config'
 alias cft='nvim $HOME/dotfiles/tmux/.tmux.conf'
 
-# Brew aliases
-if [[ "$OSTYPE" = darwin* ]]; then
-
-alias bs='brew search'
-alias bi='brew install'
-alias bci='brew cask install'
-alias bf='brew info'
-alias bcf='brew cask info'
-alias bu='brew uninstall'
-alias bcu='brew cask uninstall'
-alias bz='brew cask zap'
-alias bh='brew home'
-alias bch='brew cask home'
-alias bl='brew list'
-alias bcl='brew cask list'
-alias bc='brew update;brew upgrade;brew cask upgrade;brew cleanup;brew doctor'
-alias br='brew reinstall'
-alias bcr='brew cask reinstall'
-
-fi
-
-# for ZSH
+# OS-specific aliases
 case "$OSTYPE" in
 darwin*)
 # macOS
@@ -58,6 +38,7 @@ alias bl='brew list'
 alias bcl='brew cask list'
 alias bc='brew update;brew upgrade;brew cask upgrade;brew cleanup;brew doctor'
 alias br='brew reinstall'
+alias bcr='brew cask reinstall'
 
 ;;
 linux*)
