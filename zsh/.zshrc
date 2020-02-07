@@ -5,7 +5,7 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 unsetopt correct_all
 
 # Basic aliases
-alias ls='ls -Alh'
+alias ls='ls -Alh --color=always'
 alias tree='tree -afC'
 alias rm='rm -rdf'
 alias v='nvim'
