@@ -5,7 +5,6 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 unsetopt correct_all
 
 # Basic aliases
-alias ls='ls -Alh --color=always'
 alias tree='tree -afC'
 alias rm='rm -rdf'
 alias v='nvim'
@@ -23,7 +22,10 @@ case "$OSTYPE" in
 darwin*)
 # macOS
 
-# Brew aliases    
+# Basic aliases
+alias ls='ls -AlhG'
+
+# Brew aliases
 
 alias bs='brew search'
 alias bi='brew install'
@@ -44,6 +46,8 @@ alias bcr='brew cask reinstall'
 ;;
 linux*)
 # Linux
+
+alias ls='ls -Alh --color=always'
 
 alias p='sudo pacman'
 alias y='yaourt'
