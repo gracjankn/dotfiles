@@ -23,7 +23,7 @@ background-alt = #444
 foreground = ${xrdb:foreground}
 ; foreground = #dfdfdf
 foreground-alt = #555
-primary = ${xrdb:orange}
+primary = ${xrdb:fading}
 secondary = #e60053
 alert = #bd2c40
 
