@@ -1,5 +1,6 @@
 # Source config files and directories
 source "$HOME/.slimzsh/slim.zsh"
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 unsetopt correct_all
 
