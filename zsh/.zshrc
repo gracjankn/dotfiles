@@ -6,6 +6,7 @@ unsetopt correct_all
 
 # Set enviromental variables
 export XDG_CONFIG_HOME=$HOME/.config
+export EDITOR=nvim
 
 # Basic aliases
 alias tree='tree -afC'
