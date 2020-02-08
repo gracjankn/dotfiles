@@ -4,6 +4,9 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 unsetopt correct_all
 
+# Set enviromental variables
+export XDG_CONFIG_HOME=$HOME/.config
+
 # Basic aliases
 alias tree='tree -afC'
 alias rm='rm -rdf'
