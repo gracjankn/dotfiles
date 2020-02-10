@@ -8,6 +8,9 @@ call plug#begin()
 	" Status bar
 	Plug 'itchyny/lightline.vim'
 
+	" File manager on the left side
+	Plug 'preservim/nerdtree'
+
 	" Provides name of current git branch (for use with other plugins - like Lightline)
 	Plug 'itchyny/vim-gitbranch'
 
@@ -48,3 +51,6 @@ aug i3config_ft_detection
   au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
   au BufNewFile,BufRead ~/dotfiles/i3/.config/i3/config set filetype=i3config
 aug end
+
+" Show/hide NerdTree with keyboard shortcut
+map <C-n> :NERDTreeToggle<CR>
