@@ -179,6 +179,7 @@ assign [class="Brave"] workspace $ws1
 assign [class="firefox"] workspace $ws1
 
 # Workspace Terminal
+assign [class="St"] workspace $ws2
 assign [class="Termite"] workspace $ws2
 
 # Workspace Games
