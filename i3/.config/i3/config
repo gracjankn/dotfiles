@@ -180,3 +180,8 @@ assign [class="firefox"] workspace $ws1
 
 # Workspace Terminal
 assign [class="Termite"] workspace $ws2
+
+# Workspace Games
+assign [class="MultiMC"] workspace $ws3
+assign [class="Minecraft"] workspace $ws3
+assign [class="Steam"] workspace $ws3
