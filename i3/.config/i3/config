@@ -175,6 +175,7 @@ bindsym $hyper+m exec --no-startup-id multimc
 # ~~~~~~~~~~~~~~~~~~~~~~
 
 # Workspace Browser
+assign [class="Surf"] workspace $ws1
 assign [class="Brave"] workspace $ws1
 assign [class="firefox"] workspace $ws1
 
