@@ -32,7 +32,7 @@ call plug#end()
 set nu rnu
 
 "Make colors look cool
-colorscheme nord
+" colorscheme nord
 set termguicolors
 
 let g:lightline = {
