@@ -165,7 +165,7 @@ exec_always --no-startup-id xrdb ~/.Xresources
 # Apps
 bindsym $hyper+Return exec --no-startup-id i3-sensible-terminal
 bindsym $hyper+b exec --no-startup-id brave
-# bindsym $hyper+f exec --no-startup-id firefox
+bindsym $hyper+f exec --no-startup-id firefox
 bindsym $hyper+t exec --no-startup-id telegram-desktop
 bindsym $hyper+m exec --no-startup-id multimc
 
