@@ -1,30 +1,40 @@
-#
-#   _ _____
-#  (_)___ /        __ _  __ _ _ __  ___
-#  | | |_ \ _____ / _` |/ _` | '_ \/ __|
-#  | |___) |_____| (_| | (_| | |_) \__ \
-#  |_|____/       \__, |\__,_| .__/|___/
-#                 |___/      |_|
+# ~~~~~~~~~~~~
+#  Appearance
+# ~~~~~~~~~~~~
 
-# Set mod key to super
+# Font for windows titles and i3-bar
+font pango:DejaVu Sans Mono 10
+
+# Border style
+for_window [class="^.*"] border pixel 2, title_format " %title " smart_borders on
+smart_borders on 
+
+# ~~~~~~~~~~~
+#  Autostart
+# ~~~~~~~~~~~
+
+exec --no-startup-id xwallpaper --stretch ~/dotfiles/wallpapers/Wallpaper\ —\ Monochrome\ Mountain.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id xrdb ~/.Xresources
+
+# ~~~~~~~~~~~~~
+#  Keybindings
+# ~~~~~~~~~~~~~
+
+# Modifier keys
 set $mod Mod4
-
 set $hyper Mod3
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:Regular Nerd Font Complete Mono 10
+# Launch Apps
+bindsym $hyper+Return exec --no-startup-id i3-sensible-terminal
+bindsym $hyper+b exec --no-startup-id brave
+bindsym $hyper+f exec --no-startup-id firefox
+bindsym $hyper+t exec --no-startup-id telegram-desktop
+bindsym $hyper+m exec --no-startup-id multimc
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Use pactl to adjust volume in PulseAudio.
+# Change volume with mouse
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-
-# Use Mouse+$mod to drag floating windows
-floating_modifier $mod
 
 # Quit window
 bindsym $mod+q kill
@@ -38,54 +48,14 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# Switch windows (arrow keys)
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # Move window (VIM keys)
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-## Move window (arrow keys)
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
 # Toggle fullscreen
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+e layout toggle split
-
-# Toggle tiling/floating
-bindsym $mod+Shift+space floating toggle
-
-# Switch between tiling/floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
 
 # Switch to workspace
 bindsym $mod+1 workspace$ws1
@@ -113,62 +83,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Reload config file
 bindsym $mod+Shift+c reload
+
 # Restart i3
 bindsym $mod+Shift+r restart
-# Exit i3
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-# Change border style
-for_window [class="^.*"] border pixel 2, title_format " %title " smart_borders on
-smart_borders on 
-
-# ~~~~~~~~~~~
-#  Autostart
-# ~~~~~~~~~~~
-
-exec --no-startup-id xwallpaper --stretch ~/dotfiles/wallpapers/Wallpaper\ —\ Monochrome\ Mountain.jpg
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id xrdb ~/.Xresources
-
-
-# ~~~~~~~~~~~~~
-#  Keybindings
-# ~~~~~~~~~~~~~
-
-# Apps
-bindsym $hyper+Return exec --no-startup-id i3-sensible-terminal
-bindsym $hyper+b exec --no-startup-id brave
-bindsym $hyper+f exec --no-startup-id firefox
-bindsym $hyper+t exec --no-startup-id telegram-desktop
-bindsym $hyper+m exec --no-startup-id multimc
-
 
 # ~~~~~~~~~~~~~~~~~~~~~~
 #  Application Settings
@@ -187,3 +104,19 @@ assign [class="Termite"] workspace $ws2
 assign [class="MultiMC"] workspace $ws3
 assign [class="Minecraft"] workspace $ws3
 assign [class="Steam"] workspace $ws3
+
+# ~~~~~~~~~~~~~~~
+#  Miscellaneous
+# ~~~~~~~~~~~~~~~
+
+# Workspace Names
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
