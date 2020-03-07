@@ -55,6 +55,6 @@ linux*)
 alias ls='ls -Alh --color=always'
 
 alias p='sudo pacman'
-alias y='yaourt'
+alias y='yay'
 ;;
 esac
