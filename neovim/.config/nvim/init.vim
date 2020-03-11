@@ -26,7 +26,8 @@ call plug#begin()
 
 call plug#end()
 
-"Set enconding
+"Auto-refresh files
+set autoread | au CursorHold * checktime | call feedkeys("lh")
 
 "Hybrid numbers
 set nu rnu
