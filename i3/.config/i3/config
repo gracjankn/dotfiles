@@ -13,7 +13,7 @@ smart_borders on
 #  Autostart
 # ~~~~~~~~~~~
 
-exec --no-startup-id xwallpaper --stretch ~/dotfiles/wallpapers/Wallpaper\ —\ Monochrome\ Mountain.jpg
+exec --no-startup-id xwallpaper --stretch ~/dotfiles/wallpapers/Wallpaper\ —\ Sierra\ Purple.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 
