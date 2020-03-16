@@ -1,0 +1,50 @@
+font:
+  normal:
+    family: Menlo
+  bold:
+    family: Menlo
+  italic:
+    family: Menlo
+  size: 16.0
+  
+  use_thin_strokes: true
+  draw_bold_text_with_bright_colors: true
+
+window:
+  padding:
+    x: 10
+    y: 10
+  decorations: buttonless
+
+colors:
+  # Default colors
+  primary:
+    background: '0x0c151b'
+    foreground: '0xfeffff'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x7f7f7f'
+    cursor: '0x7f7f7f'
+
+  # Normal colors
+  normal:
+    black:   '0x3c434c'
+    red:     '0xcb253d'
+    green:   '0x3eb383'
+    yellow:  '0xfda543'
+    blue:    '0x266b85'
+    magenta: '0xca392d'
+    cyan:    '0x8995a7'
+    white:   '0xfeffff'
+
+  # Bright colors
+  bright:
+    black:   '0x515c68'
+    red:     '0xcb253d'
+    green:   '0x52e9a8'
+    yellow:  '0xfde380'
+    blue:    '0x319dcc'
+    magenta: '0xf05e32'
+    cyan:    '0xafc3db'
+    white:   '0xfeffff'
