@@ -8,6 +8,9 @@ unsetopt correct_all
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=nvim
 
+# Show pfetch on session start
+$HOME/.pfetch
+
 # Basic aliases
 alias tree='tree -afC'
 alias rm='rm -rdf'
