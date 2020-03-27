@@ -13,9 +13,6 @@ call plug#begin()
 	" Comment a line with gcc or visual selection with gc
 	Plug 'tpope/vim-commentary'
 
-	" Quickly change surrounding characters
-	Plug 'tpope/vim-surround'
-
 	" Syntax for i3 config
 	Plug 'mboughaba/i3config.vim'
 
