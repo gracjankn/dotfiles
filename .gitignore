@@ -1,4 +1,4 @@
 .DS_Store
 .config/nvim/plugged/
 .config/nvim/.netrwhist
-karabiner/.config/karabiner/automatic_backups/
+.config/karabiner/automatic_backups/
