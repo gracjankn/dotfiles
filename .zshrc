@@ -19,10 +19,10 @@ alias g='git'
 alias c='clear'
 
 # Edit configs
-alias cfz='nvim $HOME/dotfiles/zsh/.zshrc'
-alias cfv='nvim $HOME/dotfiles/neovim/.config/nvim/init.vim'
-alias cfi='nvim $HOME/dotfiles/i3/.config/i3/config'
-alias cft='nvim $HOME/dotfiles/tmux/.tmux.conf'
+alias cfz='nvim $HOME/.zshrc'
+alias cfv='nvim $HOME/.config/nvim/init.vim'
+alias cfi='nvim $HOME/.config/i3/config'
+alias cft='nvim $HOME/.tmux.conf'
 
 # OS-specific aliases
 case "$OSTYPE" in
