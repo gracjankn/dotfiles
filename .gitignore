@@ -2,3 +2,6 @@
 .config/nvim/plugged/
 .config/nvim/.netrwhist
 .config/karabiner/automatic_backups/
+.local/share/
+.zcompdump
+.zsh_history
