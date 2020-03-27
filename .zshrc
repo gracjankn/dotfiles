@@ -5,7 +5,7 @@ source "$HOME/.slimzsh/slim.zsh"
 unsetopt correct_all
 
 # Show pfetch on session start
-$HOME/.pfetch
+pfetch
 
 # Basic aliases
 alias tree='tree -afC'
