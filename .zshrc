@@ -1,11 +1,8 @@
 # Source config files and directories
 source "$HOME/.slimzsh/slim.zsh"
 
+# Disable autocorrection
 unsetopt correct_all
-
-# Set enviromental variables
-export XDG_CONFIG_HOME=$HOME/.config
-export EDITOR=nvim
 
 # Show pfetch on session start
 $HOME/.pfetch
