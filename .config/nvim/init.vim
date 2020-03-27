@@ -1,10 +1,6 @@
 "Load plugins
 call plug#begin()
 
-	" Colors
-	Plug 'connorholyday/vim-snazzy'
-	Plug 'arcticicestudio/nord-vim'
-
 	" Status bar
 	Plug 'itchyny/lightline.vim'
 
@@ -18,7 +14,6 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 
 	" Quickly change surrounding characters
-	
 	Plug 'tpope/vim-surround'
 
 	" Syntax for i3 config
@@ -33,19 +28,7 @@ set autoread | au CursorHold * checktime | call feedkeys("lh")
 set nu rnu
 
 "Make colors look cool
-" colorscheme nord
 set termguicolors
-
-let g:lightline = {
-\ 'colorscheme': 'snazzy',
-\ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'gitbranch#name'
-    \ },
-\ }
 
 aug i3config_ft_detection
   au!
