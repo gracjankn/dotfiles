@@ -1,10 +1,10 @@
-# Source config files and directories
+# Make shell more pretty
 source "$HOME/.slimzsh/slim.zsh"
 
 # Disable autocorrection
 unsetopt correct_all
 
-# Show pfetch on session start
+# Show system info and logo
 pfetch
 
 # Basic aliases
@@ -14,7 +14,7 @@ alias v='nvim'
 alias g='git'
 alias c='clear'
 
-# Edit configs
+# Config aliases
 alias cfz='nvim $XDG_CONFIG_HOME/zsh/.zshrc'
 alias cfv='nvim $XDG_CONFIG_HOME/nvim/init.vim'
 alias cfi='nvim $XDG_CONFIG_HOME/i3/config'
