@@ -18,6 +18,7 @@ alias c='clear'
 alias cfz='nvim $XDG_CONFIG_HOME/zsh/.zshrc'
 alias cfv='nvim $XDG_CONFIG_HOME/nvim/init.vim'
 alias cfi='nvim $XDG_CONFIG_HOME/i3/config'
+alias cfp='nvim $HOME/.profile'
 
 # OS-specific aliases
 case "$OSTYPE" in
