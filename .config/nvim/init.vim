@@ -16,6 +16,7 @@ call plug#begin()
 	" Note-taking workflow
 	Plug 'junegunn/fzf'
 	Plug 'https://github.com/alok/notational-fzf-vim'
+	Plug 'davidoc/taskpaper.vim'
 
 call plug#end()
 
@@ -34,5 +35,5 @@ au BufNewFile,BufRead */i3/config set filetype=i3config
 map <C-n> :NV <CR>
 
 " Note-taking workflow
-let g:nv_search_paths = ['/Users/gracjan/Library/Mobile\ Documents/com~apple~CloudDocs/Notes']
+let g:nv_search_paths = ['~/Library/Mobile\ Documents/com~apple~CloudDocs/Notes', '~/Library/Mobile\ Documents/com~apple~CloudDocs/School', '~/Library/Mobile\ Documents/com~apple~CloudDocs/Journal']
 let g:nv_default_extension = '.md'
