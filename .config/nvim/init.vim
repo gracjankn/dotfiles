@@ -31,7 +31,7 @@ set termguicolors
 
 au BufNewFile,BufRead */i3/config set filetype=i3config
 
-" Show/hide NerdTree with keyboard shortcut
+" Show/hide notes with keyboard shortcut
 map <C-n> :NV <CR>
 
 " Note-taking workflow
