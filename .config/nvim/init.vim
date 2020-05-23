@@ -13,11 +13,6 @@ call plug#begin()
 	" Syntax for i3 config
 	Plug 'mboughaba/i3config.vim'
 
-	" Note-taking workflow
-	Plug 'junegunn/fzf'
-	Plug 'https://github.com/alok/notational-fzf-vim'
-	Plug 'davidoc/taskpaper.vim'
-
 call plug#end()
 
 "Auto-refresh files
@@ -30,10 +25,3 @@ set nu rnu
 set termguicolors
 
 au BufNewFile,BufRead */i3/config set filetype=i3config
-
-" Show/hide notes with keyboard shortcut
-map <C-n> :NV <CR>
-
-" Note-taking workflow
-let g:nv_search_paths = ['~/Library/Mobile\ Documents/com~apple~CloudDocs/Notes', '~/Library/Mobile\ Documents/com~apple~CloudDocs/School', '~/Library/Mobile\ Documents/com~apple~CloudDocs/Journal']
-let g:nv_default_extension = '.md'
