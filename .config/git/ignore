@@ -1,5 +1,6 @@
 .DS_Store
 .config/nvim/plugged/
+.config/nvim/autoload/plug.vim.old
 .config/nvim/.netrwhist
 .config/karabiner/automatic_backups/
 .local/share/
