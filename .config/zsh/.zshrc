@@ -47,11 +47,11 @@ linux*)
 alias ls='ls -Alh --color=always'
 
 # Apt aliases
-alias apti="apt install"
-alias aptse="apt search"
-alias aptup="apt update && apt upgrade"
-alias aptup2="apt update && apt full-upgrade"
-alias aptrm="apt remove"
-alias aptfix="apt-get update –fix-missing; dpkg –configure -a"
+alias apti="sudo apt install"
+alias aptse="sudo apt search"
+alias aptup="sudo apt update && apt upgrade"
+alias aptup2="sudo apt update && sudo apt full-upgrade"
+alias aptrm="sudo apt remove"
+alias aptfix="sudo apt-get update –fix-missing; sudo dpkg –configure -a"
 ;;
 esac
