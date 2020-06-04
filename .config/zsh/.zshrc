@@ -49,7 +49,7 @@ alias ls='ls -Alh --color=always'
 # Apt aliases
 alias apti="sudo apt install"
 alias aptse="sudo apt search"
-alias aptup="sudo apt update && apt upgrade"
+alias aptup="sudo apt update && sudo apt upgrade"
 alias aptup2="sudo apt update && sudo apt full-upgrade"
 alias aptrm="sudo apt remove"
 alias aptfix="sudo apt-get update –fix-missing; sudo dpkg –configure -a"
