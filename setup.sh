@@ -12,11 +12,11 @@ ln -sf "$HOME/dotfiles/.config" ~
 ln -sf "$HOME/dotfiles/.local" ~
 ln -sf "$HOME/dotfiles/.zshrc" ~
 ln -sf "$HOME/dotfiles/.profile" ~
-ln -sf "$HOME/dotfiles/.zprofile" ~
+ln -sf "$HOME/.profile" ~/.zprofile
 
 
 which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew analytics off
-which nvim >/dev/null 2>&1 || /brew install neovim
+which nvim >/dev/null 2>&1 || brew install neovim
 
 touch "$HOME/.hushlogin"
