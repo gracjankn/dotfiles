@@ -24,4 +24,12 @@ set nu rnu
 "Make colors look cool
 set termguicolors
 
+"Set correct file type for i3 config to fix colors
 au BufNewFile,BufRead */i3/config set filetype=i3config
+
+"Restore terminal cursor when exiting NeoVim
+au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+  \lCursor
+  \,sm:block
+
+au VimLeave,VimSuspend * set guicursor=a:hor100
