@@ -26,16 +26,15 @@ darwin*)
 alias ls='ls -AlhG'
 
 # Brew aliases
-alias bri="brew install"
-alias brse="brew search"
-alias brup="brew update && brew upgrade"
-alias brrm="brew uninstall"
+alias bs="brew search"
+alias bi="brew install"
 alias bci='brew cask install'
-alias bf='brew info'
-alias bcf='brew cask info'
 alias bu='brew uninstall'
 alias bcu='brew cask uninstall'
 alias bz='brew cask zap'
+alias bd="brew update && brew upgrade & brew cleanup & brew doctor"
+alias bf='brew info'
+alias bcf='brew cask info'
 alias bh='brew home'
 alias bch='brew cask home'
 alias bl='brew list'
