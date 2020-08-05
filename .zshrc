@@ -24,6 +24,7 @@ alias cfp='nvim $HOME/.profile'
 case "$OSTYPE" in
 darwin*)
 alias ls='ls -AlhG'
+alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 
 # Brew aliases
 alias bs="brew search"
