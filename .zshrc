@@ -15,6 +15,13 @@ alias vim='nvim'
 alias g='git'
 alias c='clear'
 
+# ls aliases
+alias ls='exa -al --color=always --group-directories-first'
+alias la='exa -a --color=always --group-directories-first' 
+alias ll='exa -l --color=always --group-directories-first' 
+alias lt='exa -aT --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
+
 # navigation
 alias ...='cd ../..'
 alias .3='cd ../../..'
@@ -31,12 +38,6 @@ alias cfp='nvim $HOME/.profile'
 # OS-specific aliases
 case "$OSTYPE" in
 darwin*)
-# alias ls='ls -AlhG'
-alias ls='exa -al --color=always --group-directories-first'
-alias la='exa -a --color=always --group-directories-first' 
-alias ll='exa -l --color=always --group-directories-first' 
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 
 # Brew aliases
@@ -57,7 +58,6 @@ alias br='brew reinstall'
 alias bcr='brew cask reinstall'
 ;;
 linux*)
-alias ls='ls -Alh --color=always'
 
 # Apt aliases
 alias apti="sudo apt install"
