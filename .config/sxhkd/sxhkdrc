@@ -1,0 +1,13 @@
+hyper+Return
+	$TERMINAL
+hyper+b
+	brave-nightly
+hyper+1
+	1password
+hyper+f
+	nautilus
+hyper+t
+	telegram-desktop
+super+q
+	xdo close
+

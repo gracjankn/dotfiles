@@ -3,7 +3,7 @@
 # ~~~~~~~~~~~~
 
 # Font for windows titles and i3-bar
-font pango:DejaVu Sans Mono 10
+font xft:Source Code Pro Medium 10
 
 # Border style
 for_window [class="^.*"] border pixel 2, title_format " %title " smart_borders on
@@ -14,8 +14,9 @@ smart_borders on
 # ~~~~~~~~~~~
 
 exec --no-startup-id xwallpaper --stretch ~/dotfiles/wallpapers/Wallpaper\ —\ Sierra\ Purple.jpg
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id blueberry-tray
 exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id sxhkd
 
 # ~~~~~~~~~~~~~
 #  Keybindings
@@ -25,19 +26,9 @@ exec_always --no-startup-id xrdb ~/.Xresources
 set $mod Mod4
 set $hyper Mod3
 
-# Launch Apps
-bindsym $hyper+Return exec --no-startup-id i3-sensible-terminal
-bindsym $hyper+b exec --no-startup-id brave
-bindsym $hyper+f exec --no-startup-id firefox
-bindsym $hyper+t exec --no-startup-id telegram-desktop
-bindsym $hyper+m exec --no-startup-id multimc
-
 # Change volume with mouse
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-
-# Quit window
-bindsym $mod+q kill
 
 # Open DMenu (i3 wrapper hides Terminal apps)
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
