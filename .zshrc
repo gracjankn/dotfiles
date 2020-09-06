@@ -39,6 +39,7 @@ alias cfp='nvim $HOME/.profile'
 case "$OSTYPE" in
 darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
+alias flushDNS='sudo killall -HUP mDNSResponder'
 
 # Brew aliases
 alias bs="brew search"
