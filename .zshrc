@@ -16,9 +16,9 @@ alias g='git'
 alias c='clear'
 
 # ls aliases
-alias ls='lsd -al --group-dirs'
-alias la='lsd -a --group-dirs' 
-alias ll='lsd -l --group-dirs' 
+alias ls='lsd -al'
+alias la='lsd -a' 
+alias ll='lsd -l' 
 alias l.='lsd -a | egrep "^\."'
 
 # navigation
