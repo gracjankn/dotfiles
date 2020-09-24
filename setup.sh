@@ -30,28 +30,28 @@ darwin*)
 	
 		packages=(lsd speedtest-cli shellcheck exiftool )	
 		
-		which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+		command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		
 		for x in "${packages[@]}"; do
 		
-			which "$x" >/dev/null 2>&1 || brew install "$x"
+			command -v "$x" >/dev/null 2>&1 || brew install "$x"
 		
 		done
 		
-		which nvim >/dev/null 2>&1 || brew install neovim
+		command -v nvim >/dev/null 2>&1 || brew install neovim
 
 ;;
 linux*)
 
-if [ -f /etc/debian_version ]; then
+if command -v apt; then
 
 	packages=(shellcheck)
 	
 	for x in "${packages[@]}"; do
 	
-		which "$x" >/dev/null 2>&1 || sudo apt install "$x"
+		command -v "$x" >/dev/null 2>&1 || sudo apt install "$x"
 	
-		which nvim >/dev/null 2>&1 || sudo apt install neovim
+		command -v nvim >/dev/null 2>&1 || sudo apt install neovim
 	
 	done
 
