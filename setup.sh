@@ -21,10 +21,20 @@ case "$OSTYPE" in
 darwin*)
 
 	# Set Mac defaults
+		# Disable shadow for screenshots
 		defaults write com.apple.screencapture disable-sfhadow -bool true
+		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
-		defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+		# Dock: enable autohide, disable delay & animation, disable recent apps
+		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;killall Dock
+		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+		# Enable Subpixel Anti-Aliasing (Font Smoothing)
+		defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+		# Use plain text mode as default in TextEdit
+		defaults write com.apple.TextEdit RichText -int 0
+		# Quit printer app after print jobs complete
+		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 	# Install Mac packages
 	
