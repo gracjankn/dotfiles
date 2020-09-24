@@ -40,6 +40,7 @@ case "$OSTYPE" in
 darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
+alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
 
 # Brew aliases
 alias bs="brew search"
