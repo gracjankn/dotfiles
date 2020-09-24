@@ -17,7 +17,7 @@ ln -sf "$HOME/.profile" ~/.zprofile
 
 which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 which nvim >/dev/null 2>&1 || brew install neovim
-which exa >/dev/null 2>&1 || brew install exa
+which lsd >/dev/null 2>&1 || brew install lsd
 which speedtest-cli >/dev/null 2>&1 || brew install speedtest-cli
 
 touch "$HOME/.hushlogin"

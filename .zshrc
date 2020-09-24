@@ -1,4 +1,4 @@
-#//Make shell more pretty
+# Make shell more pretty
 source "$HOME/.slimzsh/slim.zsh"
 
 # Disable autocorrection
@@ -16,11 +16,10 @@ alias g='git'
 alias c='clear'
 
 # ls aliases
-alias ls='exa -al --color=always --group-directories-first'
-alias la='exa -a --color=always --group-directories-first' 
-alias ll='exa -l --color=always --group-directories-first' 
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+alias ls='lsd -al --group-dirs'
+alias la='lsd -a --group-dirs' 
+alias ll='lsd -l --group-dirs' 
+alias l.='lsd -a | egrep "^\."'
 
 # navigation
 alias ...='cd ../..'
