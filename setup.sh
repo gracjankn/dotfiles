@@ -43,7 +43,7 @@ darwin*)
 ;;
 linux*)
 
-if command -v apt; then
+if command -v apt >/dev/null 2>&1; then
 
 	packages=(shellcheck)
 	
