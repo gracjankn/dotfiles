@@ -28,7 +28,9 @@ darwin*)
 
 	# Install Mac packages
 	
-		packages=(lsd speedtest-cli shellcheck exiftool)
+		packages=(lsd speedtest-cli shellcheck exiftool )	
+		
+		which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		
 		for x in "${packages[@]}"; do
 		
@@ -36,11 +38,24 @@ darwin*)
 		
 		done
 		
-		which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		which nvim >/dev/null 2>&1 || brew install neovim
 
 ;;
 linux*)
+
+if [ -f /etc/debian_version ]; then
+
+	packages=(shellcheck)
+	
+	for x in "${packages[@]}"; do
+	
+		which "$x" >/dev/null 2>&1 || sudo apt install "$x"
+	
+		which nvim >/dev/null 2>&1 || sudo apt install neovim
+	
+	done
+
+fi
 
 ;;
 esac
