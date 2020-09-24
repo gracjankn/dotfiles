@@ -6,3 +6,4 @@
 .local/share/
 .zcompdump
 .zsh_history
+.config/gh
