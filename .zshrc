@@ -16,9 +16,9 @@ alias g='git'
 alias c='clear'
 
 # ls aliases
-alias ls='lsd -al'
-alias la='lsd -a' 
-alias ll='lsd -l' 
+alias ls='lsd -Al'
+alias la='lsd -A' 
+alias ll='lsd -A' 
 alias l.='lsd -a | egrep "^\."'
 
 # navigation
