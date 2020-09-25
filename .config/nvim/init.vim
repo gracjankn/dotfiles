@@ -34,17 +34,28 @@ au VimLeave,VimSuspend * set guicursor=a:hor100
 "Use system clipboard
 set clipboard=unnamedplus
 
+<<<<<<< HEAD
 " Highlight selected line
 set cursorline
 
 " Custom status bar - left side
+=======
+map <C-N> :EditVifm .<CR>
+map <C-S> :source ~/.config/nvim/init.vim<CR>
+
+set cursorline
+
+>>>>>>> 99ea081 (Changed lightline for a custom made status bar)
 set statusline+=%#Type#
 set statusline+=\ %m
 set statusline+=\ %y
 set statusline+=\ %r
 set statusline+=\ %F
 
+<<<<<<< HEAD
 " Custom status bar - right side
+=======
+>>>>>>> 99ea081 (Changed lightline for a custom made status bar)
 set statusline+=%=%#Identifier#
 
 set statusline+=\ %c:%l:%L
