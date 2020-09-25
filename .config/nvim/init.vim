@@ -1,9 +1,6 @@
 " Load plugins
 call plug#begin()
 
-	" Provides name of current git branch (for use with other plugins - like Lightline)
-	Plug 'itchyny/vim-gitbranch'
-
 	" Comment a line with gcc or visual selection with gc
 	Plug 'tpope/vim-commentary'
 
