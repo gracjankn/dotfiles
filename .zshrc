@@ -40,6 +40,7 @@ darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
 alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
+alias update='sudo softwareupdate -ia —verbose ; brew bundle --file $HOME/dotfiles/Brewfile ; brew cleanup ; brew doctor'
 
 # Brew aliases
 alias bs="brew search"
