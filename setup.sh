@@ -40,23 +40,7 @@ darwin*)
 		
 		command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		
-		#!/bin/bash
-		
-		packagesToCheck=(lsd speedtest-cli shellcheck exiftool gh git ffmpeg wget)
-		
-		for x in "${packagesToCheck[@]}"; do
-		
-			command -v "$x" >/dev/null 2>&1 || packagesToInstall+=("$x")
-		
-		done
-		
-		command -v nvim >/dev/null 2>&1 || packagesToInstall+=("neovim")
-		
-		for x in "${packagesToInstall[@]}"; do
-		
-			command -v "$x" >/dev/null 2>&1 || brew install "$x"
-		
-		done
+		brew bundle --file "$HOME/dotfiles/Brewfile"
 
 ;;
 linux*)
