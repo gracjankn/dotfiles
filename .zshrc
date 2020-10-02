@@ -54,7 +54,7 @@ alias bcf='brew cask info'
 alias bh='brew home'
 alias bch='brew cask home'
 alias bl='brew list'
-alias bcl='brew cask list'
+alias bcl='brew list --cask'
 alias br='brew reinstall'
 alias bcr='brew cask reinstall'
 ;;
