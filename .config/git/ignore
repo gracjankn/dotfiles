@@ -7,3 +7,4 @@
 .zcompdump
 .zsh_history
 .config/gh
+.config/configstore
