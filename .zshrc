@@ -45,9 +45,7 @@ alias update='sudo softwareupdate -ia —verbose ; brew bundle --file $HOME/dotf
 # Brew aliases
 alias bs="brew search"
 alias bi="brew install"
-alias bci='brew cask install'
-alias bu='brew uninstall'
-alias bcu='brew cask uninstall'
+alias bu='brew rm'
 alias bz='brew cask zap'
 alias bd="brew update && brew upgrade & brew cleanup & brew doctor"
 alias bf='brew info'
@@ -56,7 +54,6 @@ alias bh='brew home'
 alias bl='brew list'
 alias bcl='brew list --cask'
 alias br='brew reinstall'
-alias bcr='brew reinstall --cask'
 ;;
 linux*)
 
