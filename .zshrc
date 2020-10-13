@@ -53,11 +53,10 @@ alias bd="brew update && brew upgrade & brew cleanup & brew doctor"
 alias bf='brew info'
 alias bcf='brew cask info'
 alias bh='brew home'
-alias bch='brew cask home'
 alias bl='brew list'
 alias bcl='brew list --cask'
 alias br='brew reinstall'
-alias bcr='brew cask reinstall'
+alias bcr='brew reinstall --cask'
 ;;
 linux*)
 
