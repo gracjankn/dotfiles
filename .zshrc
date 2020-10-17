@@ -34,13 +34,15 @@ alias cfv='nvim $XDG_CONFIG_HOME/nvim/init.vim'
 alias cfi='nvim $XDG_CONFIG_HOME/i3/config'
 alias cfp='nvim $HOME/.profile'
 
-# OS-specific aliases
+# OS-specific
 case "$OSTYPE" in
 darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
 alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
 alias update='sudo softwareupdate -ia —verbose ; brew bundle --file $HOME/dotfiles/Brewfile ; brew cleanup ; brew doctor'
+
+export PATH="/usr/local/sbin:$PATH"
 
 # Brew aliases
 alias bs="brew search"
