@@ -7,9 +7,7 @@
 # Make symbolic links
 	ln -sf "$HOME/dotfiles/.config" ~
 	ln -sf "$HOME/dotfiles/.local" ~
-
-# Move zcompdump
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+	ln -sf "$HOME/dotfiles/.zshenv" ~
 
 # OS specific commands
 
@@ -31,6 +29,10 @@ darwin*)
 		defaults write com.apple.TextEdit RichText -int 0
 		# Quit printer app after print jobs complete
 		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+		# Specify the preferences directory
+		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm"
+		# Tell iTerm2 to use the custom preferences in the directory
+		defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 	# Install Mac packages
 		
