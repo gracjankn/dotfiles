@@ -33,6 +33,7 @@ alias cfz='nvim $XDG_CONFIG_HOME/zsh/.zshrc'
 alias cfv='nvim $XDG_CONFIG_HOME/nvim/init.vim'
 alias cfi='nvim $XDG_CONFIG_HOME/i3/config'
 alias cfe='nvim $HOME/.zshenv'
+alias sc='source $XDG_CONFIG_HOME/zsh/.zshrc'
 
 # OS-specific
 case "$OSTYPE" in
@@ -68,30 +69,3 @@ alias aptrm="sudo apt remove"
 alias aptfix="sudo apt-get update –fix-missing; sudo dpkg –configure -a"
 ;;
 esac
-
-### ARCHIVE EXTRACTION
-# usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;      
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
