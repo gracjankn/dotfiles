@@ -1,15 +1,24 @@
-# Make shell more pretty
-source "$HOME/.slimzsh/slim.zsh"
+# Load colors
+autoload -U colors && colors
 
-# Disable autocorrection
-unsetopt correct_all
+# Set prompt
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Show system info and logo
 pfetch
 
+# Highlight syntax
+source "$HOME/.local/share/fsh/fast-syntax-highlighting.plugin.zsh"
+
+# Disable autocorrection
+unsetopt correct_all
+
+# Completion
+source $XDG_CONFIG_HOME/zsh/completion
+
 # Basic aliases
 alias tree='tree -afC'
-alias rm='rm -rdf'
+alias rm='rm -Rdf'
 alias v='nvim'
 alias vim='nvim'
 alias g='git'
