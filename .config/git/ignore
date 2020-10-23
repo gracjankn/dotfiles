@@ -6,5 +6,6 @@
 .local/share/
 .zcompdump
 .zsh_history
+.zsh_sessions
 .config/gh
 .config/configstore
