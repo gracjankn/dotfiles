@@ -7,13 +7,9 @@
 # Make symbolic links
 	ln -sf "$HOME/dotfiles/.config" ~
 	ln -sf "$HOME/dotfiles/.local" ~
-	ln -sf "$HOME/dotfiles/.zshrc" ~
-	ln -sf "$HOME/dotfiles/.profile" ~
-	ln -sf "$HOME/.profile" ~/.zprofile
 
-
-# Disable login message
-touch "$HOME/.hushlogin"
+# Move zcompdump
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # OS specific commands
 
