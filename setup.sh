@@ -2,7 +2,7 @@
 
 # Clone git repos
 	[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gracjankn/dotfiles.git
-	[ ! -d "$HOME/.slimzsh" ] && git clone --recursive https://github.com/changs/slimzsh.git ~/.slimzsh
+	[ ! -d "$HOME/.local/share/fsh" ] && git clone https://github.com/zdharma/fast-syntax-highlighting ~/.local/share/fsh
 
 # Make symbolic links
 	ln -sf "$HOME/dotfiles/.config" ~
