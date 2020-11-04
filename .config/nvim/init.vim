@@ -42,3 +42,5 @@ set autoread | au CursorHold * checktime | call feedkeys("lh")
 
 "Set correct file type for i3 config to fix colors
 au BufNewFile,BufRead */i3/config set filetype=i3config
+
+map Q <nop>
