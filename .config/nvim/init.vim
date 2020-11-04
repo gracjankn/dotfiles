@@ -69,4 +69,9 @@ set autoread | au CursorHold * checktime | call feedkeys("lh")
 
 "Set correct file type for i3 config to fix colors
 au BufNewFile,BufRead */i3/config set filetype=i3config
+<<<<<<< HEAD
 >>>>>>> f4f3c58 (Enabled line numbers in NeoVim)
+=======
+
+map Q <nop>
+>>>>>>> d956280 (Disabled entering ex mode in NeoVim)
