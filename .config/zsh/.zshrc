@@ -50,7 +50,7 @@ darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
 alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
-alias update='sudo softwareupdate -ia —verbose ; brew bundle --file $HOME/dotfiles/Brewfile ; brew cleanup ; brew doctor'
+alias update='sudo softwareupdate -ia —verbose;mas upgrade brew update;brew upgrade;brew cleanup;brew doctor'
 
 export PATH="/usr/local/sbin:$PATH"
 
@@ -59,7 +59,7 @@ alias bs="brew search"
 alias bi="brew install"
 alias bu='brew rm'
 alias bz='brew cask zap'
-alias bd="brew update && brew upgrade & brew cleanup & brew doctor"
+alias bd="brew update;brew upgrade;brew cleanup;brew doctor"
 alias bf='brew info'
 alias bcf='brew cask info'
 alias bh='brew home'
@@ -72,9 +72,9 @@ linux*)
 # Apt aliases
 alias apti="sudo apt install"
 alias aptse="sudo apt search"
-alias aptup="sudo apt update && sudo apt upgrade"
-alias aptup2="sudo apt update && sudo apt full-upgrade"
+alias aptup="sudo apt update;sudo apt upgrade"
+alias aptup2="sudo apt update;sudo apt full-upgrade"
 alias aptrm="sudo apt remove"
-alias aptfix="sudo apt-get update –fix-missing; sudo dpkg –configure -a"
+alias aptfix="sudo apt-get update –fix-missing;sudo dpkg –configure -a"
 ;;
 esac
