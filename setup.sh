@@ -31,6 +31,8 @@ darwin*)
 		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 		# iTerm: specify the preferences directory
 		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+		# Safari: disable Google Safe Browsing, disable Quick Website Search
+		defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false;defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 
 	# Install Mac packages
 		
