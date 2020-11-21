@@ -20,7 +20,7 @@ darwin*)
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
 		# Dock: enable autohide, disable delay & animation, disable recent apps, set left orientation, enable Minimize to Application, 
-		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;com.apple.dock minimize-to-application -bool true;defaults write com.apple.dock orientation "left";killall Dock
+		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;defaults write com.apple.dock minimize-to-application -bool true;defaults write com.apple.dock orientation "left";killall Dock
 		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 		# Enable Subpixel Anti-Aliasing (Font Smoothing)
