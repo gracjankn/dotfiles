@@ -19,8 +19,8 @@ darwin*)
 		defaults write com.apple.screencapture disable-sfhadow -bool true
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
-		# Dock: enable autohide, disable delay & animation, disable recent apps
-		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;killall Dock
+		# Dock: enable autohide, disable delay & animation, disable recent apps, set left orientation, enable Minimize to Application, 
+		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;com.apple.dock minimize-to-application -bool true;defaults write com.apple.dock orientation "left";killall Dock
 		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 		# Enable Subpixel Anti-Aliasing (Font Smoothing)
@@ -29,10 +29,8 @@ darwin*)
 		defaults write com.apple.TextEdit RichText -int 0
 		# Quit printer app after print jobs complete
 		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-		# Specify the preferences directory
-		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm"
-		# Tell iTerm2 to use the custom preferences in the directory
-		defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+		# iTerm: specify the preferences directory
+		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 	# Install Mac packages
 		
