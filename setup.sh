@@ -18,8 +18,16 @@ darwin*)
 	sudo scutil --set ComputerName MacBook;sudo scutil --set HostName MacBook;sudo scutil --set LocalHostName MacBook;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string MacBook
 
 	# Set Mac defaults
-		# Finder: always show file extensions
-		defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+		# Finder
+		
+			# Show extensions: on
+			defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+			
+			# Changing file extension warning: off
+			defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+			
+			# Restart Finder
+			killall Finder
 		
 		# Disable shadow for screenshots
 		defaults write com.apple.screencapture disable-sfhadow -bool true
