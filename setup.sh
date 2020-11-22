@@ -24,8 +24,35 @@ darwin*)
 		defaults write com.apple.screencapture disable-sfhadow -bool true
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
-		# Dock: enable autohide, disable delay & animation, disable recent apps, set left orientation, enable Minimize to Application, 
-		defaults write com.apple.dock autohide -bool true;defaults write com.apple.Dock autohide-delay -float 0;defaults write com.apple.dock autohide-time-modifier -int 0;defaults write com.apple.dock show-recents -bool false;defaults write com.apple.dock minimize-to-application -bool true;defaults write com.apple.dock orientation "left";killall Dock
+		
+		# Dock: enable autohide, disable delay & animation, disable recent apps, set left orientation, enable Minimize to Application
+			
+			# Position: left
+			defaults write com.apple.dock orientation -string left
+			
+			# Icon size: 48
+			defaults write com.apple.dock tilesize -int 48
+			
+			# Autohide: on
+			defaults write com.apple.dock autohide -bool true
+			
+			# Autohide animation time: 0
+			defaults write com.apple.dock autohide-time-modifier -float 0
+			
+			# Autohide delay: 0
+			
+			defaults write com.apple.Dock autohide-delay -float 0
+			
+			# Show recents: off
+			defaults write com.apple.dock show-recents -bool false
+			
+			# Minimize windows into application icon: on
+			defaults write com.apple.dock minimize-to-application -bool true
+			
+			# Restart Dock
+			killall Dock
+						
+
 		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 		# Enable Subpixel Anti-Aliasing (Font Smoothing)
