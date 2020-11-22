@@ -20,8 +20,10 @@ darwin*)
 	# Set Mac defaults
 		# Finder: always show file extensions
 		defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+		
 		# Disable shadow for screenshots
 		defaults write com.apple.screencapture disable-sfhadow -bool true
+		
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
 		
@@ -55,16 +57,27 @@ darwin*)
 
 		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+		
 		# Enable Subpixel Anti-Aliasing (Font Smoothing)
 		defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+		
 		# Use plain text mode as default in TextEdit
 		defaults write com.apple.TextEdit RichText -int 0
+		
 		# Quit printer app after print jobs complete
 		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+		
 		# iTerm: specify the preferences directory
 		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-		# Safari: disable Google Safe Browsing, disable Quick Website Search
-		defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false;defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
+		
+		# Safari
+			
+			# Google Safe Browsing: off
+			defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false
+			
+			# Quick Website Search: off
+			defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
+			
 		# Disable creation of .DS_Store files on external and network volumes
 		defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
