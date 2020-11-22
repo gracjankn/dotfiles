@@ -36,6 +36,8 @@ darwin*)
 		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 		# Safari: disable Google Safe Browsing, disable Quick Website Search
 		defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false;defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
+		# Disable creation of .DS_Store files on external and network volumes
+		defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 	# Install Mac packages
 		
