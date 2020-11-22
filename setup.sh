@@ -14,6 +14,9 @@
 case "$OSTYPE" in
 darwin*)
 
+	# Set computer name
+	sudo scutil --set ComputerName MacBook;sudo scutil --set HostName MacBook;sudo scutil --set LocalHostName MacBook;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string MacBook
+
 	# Set Mac defaults
 		# Disable shadow for screenshots
 		defaults write com.apple.screencapture disable-sfhadow -bool true
