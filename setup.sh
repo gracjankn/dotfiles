@@ -88,6 +88,12 @@ darwin*)
 			
 		# Disable creation of .DS_Store files on external and network volumes
 		defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+		
+		# Don't offer new disks for Time Machine backup
+		defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+		
+		# Allow Help Menu to go behind other windows
+		defaults write com.apple.helpviewer DevMode -bool true
 
 	# Install Mac packages
 		
