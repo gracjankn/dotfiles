@@ -50,7 +50,7 @@ darwin*)
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
 alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
-alias update='sudo softwareupdate -ia —verbose;mas upgrade brew update;brew upgrade;brew cleanup;brew doctor'
+alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew doctor'
 
 export PATH="/usr/local/sbin:$PATH"
 
