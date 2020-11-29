@@ -24,6 +24,9 @@ alias vim='nvim'
 alias g='git'
 alias c='clear'
 
+# youtube-dl
+alias downloadMP3='youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0'
+
 # ls aliases
 alias ls='lsd -Al'
 alias la='lsd -A' 
