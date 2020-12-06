@@ -7,7 +7,10 @@
 # Make symbolic links
 	ln -sf "$HOME/dotfiles/.config" ~
 	ln -sf "$HOME/dotfiles/.local" ~
-	ln -sf "$HOME/dotfiles/.zshenv" ~
+	ln -sf "$HOME/dotfiles/.profile" ~
+
+# Source .profile in .zshenv
+	echo 'source $HOME/dotfiles/.profile' >> $HOME/.zshenv
 
 # OS specific commands
 
