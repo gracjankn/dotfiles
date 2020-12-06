@@ -1,11 +1,11 @@
 # Load colors
-autoload -U colors && colors
+# autoload -U colors && colors
 
 # Set prompt
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # Show system info and logo
-pfetch
+# pfetch
 
 # Highlight syntax
 source "$HOME/.local/share/fsh/fast-syntax-highlighting.plugin.zsh"
@@ -81,3 +81,5 @@ alias aptrm="sudo apt remove"
 alias aptfix="sudo apt-get update –fix-missing;sudo dpkg –configure -a"
 ;;
 esac
+
+eval "$(starship init zsh)"
