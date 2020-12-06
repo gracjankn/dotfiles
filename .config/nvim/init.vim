@@ -12,6 +12,7 @@ call plug#begin()
 	Plug 'mboughaba/i3config.vim'
 =======
 	Plug 'tpope/vim-commentary' "Comment a line with gcc or visual selection with gc
+	Plug 'dag/vim-fish' "Syntax for fish config
 	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
 >>>>>>> 2fea2d6 (Shortened NeoVim config comments)
 
