@@ -24,6 +24,8 @@ alias .6='cd ../../../../..'
 
 # Config aliases
 alias cfz='nvim $XDG_CONFIG_HOME/zsh/.zshrc'
+alias cff='nvim $XDG_CONFIG_HOME/fish/config.fish'
+alias cfa='nvim $XDG_CONFIG_HOME/aliases'
 alias cfv='nvim $XDG_CONFIG_HOME/nvim/init.vim'
 alias cfi='nvim $XDG_CONFIG_HOME/i3/config'
 alias cfe='nvim $HOME/.zshenv'
