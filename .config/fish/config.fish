@@ -31,3 +31,4 @@ else
   bind '$' __history_previous_command_arguments
 end
 
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
