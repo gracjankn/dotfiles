@@ -2,9 +2,9 @@ set fish_greeting
 
 starship init fish | source
 
-sed 's/\s*#.*//g; /^$/ d; s/export/set/g; s/=/\ /g' ~/dotfiles/.profile | source
+sed 's/\s*#.*//g; /^$/ d; s/export/set/; s/=/\ /g' ~/dotfiles/.profile | source
 
-sed 's/\s*#.*//g; /^$/ d; s/alias/abbr/g; s/=/\ /g' ~/.config/aliases | source
+sed 's/\s*#.*//g; /^$/ d; s/alias/abbr/; s/=/\ /g' ~/.config/aliases | source
 
 # Functions needed for !! and !$
 function __history_previous_command
