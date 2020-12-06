@@ -2,6 +2,8 @@ set fish_greeting
 
 starship init fish | source
 
+sed 's/\s*#.*//g; /^$/ d; s/export/set/g; s/=/\ /g' ~/dotfiles/.profile | source
+
 sed 's/\s*#.*//g; /^$/ d; s/alias/abbr/g; s/=/\ /g' ~/.config/aliases | source
 
 # Functions needed for !! and !$
