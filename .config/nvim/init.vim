@@ -1,6 +1,7 @@
 "Load plugins
 call plug#begin()
 
+<<<<<<< HEAD
 	" Provides name of current git branch (for use with other plugins - like Lightline)
 	Plug 'itchyny/vim-gitbranch'
 
@@ -9,17 +10,16 @@ call plug#begin()
 
 	" Syntax for i3 config
 	Plug 'mboughaba/i3config.vim'
+=======
+	Plug 'tpope/vim-commentary' "Comment a line with gcc or visual selection with gc
+	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
+>>>>>>> 2fea2d6 (Shortened NeoVim config comments)
 
 call plug#end()
 
-"Hybrid numbers
-set nu rnu
-
-"Make colors look cool
-set termguicolors
-
-"Use system clipboard
-set clipboard=unnamedplus
+set nu rnu "Hybrid numbers
+set termguicolors "Make colors look cool
+set clipboard=unnamedplus "Use system clipboard
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,14 +64,17 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
   \,sm:block
 au VimLeave,VimSuspend * set guicursor=a:hor100
 
-"Auto-refresh files
-set autoread | au CursorHold * checktime | call feedkeys("lh")
+set autoread | au CursorHold * checktime | call feedkeys("lh") "Auto-refresh files
 
+<<<<<<< HEAD
 "Set correct file type for i3 config to fix colors
 au BufNewFile,BufRead */i3/config set filetype=i3config
 <<<<<<< HEAD
 >>>>>>> f4f3c58 (Enabled line numbers in NeoVim)
 =======
+=======
+au BufNewFile,BufRead */i3/config set filetype=i3config "Recognize i3 config
+>>>>>>> 2fea2d6 (Shortened NeoVim config comments)
 
 map Q <nop>
 >>>>>>> d956280 (Disabled entering ex mode in NeoVim)
