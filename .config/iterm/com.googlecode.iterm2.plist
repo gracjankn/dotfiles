@@ -2370,7 +2370,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>tmux attach-session</string>
+			<string>/usr/local/bin/fish</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2405,7 +2405,7 @@
 			<key>Cursor Type</key>
 			<integer>0</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Custom Shell</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -3085,7 +3085,7 @@
 						<key>Root</key>
 						<dict>
 							<key>Splitter ID</key>
-							<string>3EAC24B2-4207-46EA-B05A-36FBD2B18DB0</string>
+							<string>D27B4588-1E2F-4F10-8363-05858F6A731C</string>
 							<key>Subviews</key>
 							<array>
 								<dict>
@@ -3311,7 +3311,7 @@
 											<key>Columns</key>
 											<integer>80</integer>
 											<key>Command</key>
-											<string>tmux attach-session</string>
+											<string>/usr/local/bin/fish</string>
 											<key>Cursor Color</key>
 											<dict>
 												<key>Blue Component</key>
@@ -3346,7 +3346,7 @@
 											<key>Cursor Type</key>
 											<integer>0</integer>
 											<key>Custom Command</key>
-											<string>No</string>
+											<string>Custom Shell</string>
 											<key>Custom Directory</key>
 											<string>No</string>
 											<key>Default Bookmark</key>
@@ -3369,7 +3369,7 @@
 												<real>1</real>
 											</dict>
 											<key>Guid</key>
-											<string>73251F56-16A6-4E57-A4B3-1723AA467A50</string>
+											<string>8AC5DD90-2C1B-466A-AD17-F60067F8471E</string>
 											<key>Hide After Opening</key>
 											<false/>
 											<key>Horizontal Spacing</key>
@@ -3844,6 +3844,8 @@
 											<string>FiraCodeNerdFontCompleteM-Regular 18</string>
 											<key>Option Key Sends</key>
 											<integer>0</integer>
+											<key>Original Guid</key>
+											<string>73251F56-16A6-4E57-A4B3-1723AA467A50</string>
 											<key>Prompt Before Closing 2</key>
 											<false/>
 											<key>Right Option Key Sends</key>
@@ -3884,6 +3886,8 @@
 											<array/>
 											<key>Terminal Type</key>
 											<string>xterm-new</string>
+											<key>Title Components</key>
+											<integer>3</integer>
 											<key>Transparency</key>
 											<real>0.0</real>
 											<key>Unicode Normalization</key>
@@ -3918,7 +3922,12 @@
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
-										<array/>
+										<array>
+											<string>/Users/gracjan</string>
+											<string>/Users/gracjan</string>
+											<string>/Users/gracjan</string>
+											<string>/Users/gracjan</string>
+										</array>
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
@@ -3939,17 +3948,23 @@
 											<key>window title stack</key>
 											<array/>
 										</dict>
+										<key>Overridden Fields</key>
+										<array>
+											<string>Original Guid</string>
+											<string>Guid</string>
+											<string>Title Components</string>
+										</array>
 										<key>Program</key>
 										<dict>
-											<key>Command</key>
-											<string>login -fp "gracjan"</string>
+											<key>Custom Shell</key>
+											<string>/usr/local/bin/fish</string>
 											<key>Type</key>
-											<string>Command</string>
+											<string>Custom Shell</string>
 										</dict>
 										<key>Rows</key>
 										<integer>36</integer>
 										<key>Session GUID</key>
-										<string>63D83384-EA7C-4A27-BBB9-29A16AB92886</string>
+										<string>32152BEE-18C3-4B59-AF04-AB33A153779B</string>
 										<key>Short Lived Single Use</key>
 										<false/>
 										<key>Should Expect Current Dir Updates</key>
@@ -3995,11 +4010,11 @@
 							<false/>
 						</dict>
 						<key>Tab GUID</key>
-						<string>971D14DD-5E9D-4788-B74A-BCC247FE36FA</string>
+						<string>E9EE5667-880A-4DFD-8F28-3B7688A27776</string>
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-B340D202-910B-4E57-9A0C-63D41479E5E7</string>
+				<string>pty-EC168E7A-4B90-4C74-AF8A-A071EC32034D</string>
 				<key>Toolbelt</key>
 				<dict>
 					<key>Profiles</key>
