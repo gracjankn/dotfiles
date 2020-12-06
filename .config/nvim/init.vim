@@ -1,22 +1,14 @@
 "Load plugins
 call plug#begin()
 
-	" Comment a line with gcc or visual selection with gc
-	Plug 'tpope/vim-commentary'
-
-	" Syntax for i3 config
-	Plug 'mboughaba/i3config.vim'
+	Plug 'tpope/vim-commentary' "Comment a line with gcc or visual selection with gc
+	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
 
 call plug#end()
 
-"Hybrid numbers
-set nu rnu
-
-"Make colors look cool
-set termguicolors
-
-"Use system clipboard
-set clipboard=unnamedplus
+set nu rnu "Hybrid numbers
+set termguicolors "Make colors look cool
+set clipboard=unnamedplus "Use system clipboard
 
 "Custom status bar - left side
 set statusline+=%#Type#
@@ -37,10 +29,8 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
   \,sm:block
 au VimLeave,VimSuspend * set guicursor=a:hor100
 
-"Auto-refresh files
-set autoread | au CursorHold * checktime | call feedkeys("lh")
+set autoread | au CursorHold * checktime | call feedkeys("lh") "Auto-refresh files
 
-"Set correct file type for i3 config to fix colors
-au BufNewFile,BufRead */i3/config set filetype=i3config
+au BufNewFile,BufRead */i3/config set filetype=i3config "Recognize i3 config
 
 map Q <nop>
