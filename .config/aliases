@@ -5,6 +5,7 @@ alias v='nvim'
 alias vim='nvim'
 alias g='git'
 alias c='clear'
+alias wget='wget --hsts-file ""'
 
 # youtube-dl
 alias downloadMP3='youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0'
