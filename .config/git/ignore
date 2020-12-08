@@ -1,12 +1,13 @@
 .DS_Store
+.config/configstore
+.config/gh
+.config/htop/
 .config/nvim/plugged/
 .config/nvim/autoload/plug.vim.old
-.netrwhist
+.config/fish/fish_variables
 .config/karabiner/automatic_backups/
 .local/share/
+.netrwhist
 .zcompdump
 .zsh_history
 .zsh_sessions
-.config/gh
-.config/configstore
-.config/fish/fish_variables
