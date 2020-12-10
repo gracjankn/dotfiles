@@ -39,7 +39,7 @@ darwin*)
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
 		
-		# Dock: enable autohide, disable delay & animation, disable recent apps, set left orientation, enable Minimize to Application
+		# Dock
 			
 			# Position: left
 			defaults write com.apple.dock orientation -string left
