@@ -39,7 +39,7 @@ darwin*)
 		# Automatically expand print dialogs
 		defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
 
-		# Quicker key press
+		# Quicker key presses
 		defaults write -g InitialKeyRepeat -int 10 ; defaults write -g KeyRepeat -int 1
 		
 		# Dock
