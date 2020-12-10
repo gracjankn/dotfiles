@@ -113,6 +113,7 @@ darwin*)
 
 	# Print warning if csrutil is not enabled
 		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
+		[ "$(sudo fdesetup status)" != "FileVault is On." ] && sudo fdesetup enable
 
 ;;
 linux*)
