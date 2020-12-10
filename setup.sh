@@ -8,9 +8,7 @@
 	ln -sf "$HOME/dotfiles/.config" ~
 	ln -sf "$HOME/dotfiles/.local" ~
 	ln -sf "$HOME/dotfiles/.profile" ~
-
-# Source .profile in .zshenv
-	echo 'source $HOME/dotfiles/.profile' >> $HOME/.zshenv
+	ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 
 # OS specific commands
 
