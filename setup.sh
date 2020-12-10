@@ -41,6 +41,9 @@ darwin*)
 
 		# Quicker key presses
 		defaults write -g InitialKeyRepeat -int 10 ; defaults write -g KeyRepeat -int 1
+
+		# Faster trackpad speed
+		defaults write .GlobalPreferences com.apple.trackpad.scaling -float 3
 		
 		# Dock
 			
