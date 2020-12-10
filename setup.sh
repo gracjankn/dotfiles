@@ -113,7 +113,16 @@ darwin*)
 
 	# Print warning if csrutil is not enabled
 		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
+	
+	# Enable FileVault
 		[ "$(sudo fdesetup status)" != "FileVault is On." ] && sudo fdesetup enable
+
+	# Configure Firewall
+	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
+	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
+	sudo pkill -HUP socketfilterfw
 
 ;;
 linux*)
