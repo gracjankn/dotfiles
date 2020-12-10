@@ -105,6 +105,9 @@ darwin*)
 		
 		brew bundle --file "$HOME/dotfiles/Brewfile"
 
+	# Print warning if csrutil is not enabled
+		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
+
 ;;
 linux*)
 
