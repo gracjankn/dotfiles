@@ -10,9 +10,6 @@
 	ln -sf "$HOME/dotfiles/.profile" ~
 	ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 
-# Set fish as default shell
-	chsh -s "$(which fish)"
-
 # OS specific commands
 
 case "$OSTYPE" in
