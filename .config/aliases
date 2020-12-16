@@ -35,14 +35,14 @@ alias sc='source $XDG_CONFIG_HOME/zsh/.zshrc'
 alias resetLaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushDNS='sudo killall -HUP mDNSResponder'
 alias copySSH='pbcopy < ~/.ssh/id_rsa.pub'
-alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew doctor'
+alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor'
 
 # Brew aliases
 alias bs="brew search"
 alias bi="brew install"
 alias bu='brew rm'
 alias bz='brew uninstall --zap'
-alias bd="brew update;brew upgrade;brew cleanup;brew doctor"
+alias bd="brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor"
 alias bf='brew info'
 alias bcf='brew info --cask '
 alias bh='brew home'
