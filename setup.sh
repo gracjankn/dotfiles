@@ -41,7 +41,10 @@ darwin*)
 
 		# Faster trackpad speed
 		defaults write .GlobalPreferences com.apple.trackpad.scaling -float 3
-		
+
+		# Disable blinking cursor
+		defaults write -g NSTextInsertionPointBlinkPeriodOn -float 99999999;defaults write -g NSTextInsertionPointBlinkPeriodOff -float 99999999
+
 		# Dock
 			
 			# Position: left
