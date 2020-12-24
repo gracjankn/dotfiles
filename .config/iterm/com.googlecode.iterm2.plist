@@ -7,7 +7,7 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
-	<true/>
+	<false/>
 	<key>Command</key>
 	<string></string>
 	<key>Custom Color Presets</key>
