@@ -12,3 +12,6 @@ ignore-globs:
   - .git
   - .hushlogin
   - .CFUserTextEncoding
+  
+sorting:
+  dir-grouping: first
