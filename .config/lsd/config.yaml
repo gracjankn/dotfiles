@@ -6,3 +6,9 @@ blocks:
 date: relative
 
 dereference: true
+
+ignore-globs:
+  - .DS_Store
+  - .git
+  - .hushlogin
+  - .CFUserTextEncoding
