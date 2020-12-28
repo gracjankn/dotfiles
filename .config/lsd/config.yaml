@@ -5,8 +5,6 @@ blocks:
 
 date: relative
 
-dereference: true
-
 ignore-globs:
   - .DS_Store
   - .git
@@ -15,3 +13,5 @@ ignore-globs:
   
 sorting:
   dir-grouping: first
+  
+symlink-arrow: ->
