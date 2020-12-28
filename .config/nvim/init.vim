@@ -14,12 +14,17 @@ call plug#begin()
 	Plug 'tpope/vim-commentary' "Comment a line with gcc or visual selection with gc
 	Plug 'dag/vim-fish' "Syntax for fish config
 	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
+<<<<<<< HEAD
 >>>>>>> 2fea2d6 (Shortened NeoVim config comments)
+=======
+	Plug 'dracula/vim' "Colorscheme
+>>>>>>> 819138a (Changed NeoVim color scheme to Dracula)
 
 call plug#end()
 
 set nu rnu "Hybrid numbers
-set termguicolors "Make colors look cool
+set termguicolors "Improve color rendering
+colorscheme dracula "Set color scheme
 set clipboard=unnamedplus "Use system clipboard
 
 <<<<<<< HEAD
