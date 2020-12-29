@@ -15,8 +15,12 @@ call plug#begin()
 	Plug 'dag/vim-fish' "Syntax for fish config
 	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fea2d6 (Shortened NeoVim config comments)
 =======
+=======
+	Plug 'cespare/vim-toml' "Syntax for toml
+>>>>>>> 3c62faf (Added toml syntax plugin to NeoVim)
 	Plug 'dracula/vim' "Colorscheme
 >>>>>>> 819138a (Changed NeoVim color scheme to Dracula)
 
