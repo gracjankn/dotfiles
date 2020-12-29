@@ -15,3 +15,5 @@ sorting:
   dir-grouping: first
   
 symlink-arrow: ->
+
+total-size: true
