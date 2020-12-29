@@ -2,7 +2,7 @@ add_newline = true # No new line at start
 [line_break]
 disabled = true # One line prompt
 [character]
-success_symbol = '[➜](bold green) ' # Change symbol normally showed before command
+success_symbol = '[➜](bold green)' # Change symbol normally showed before command
 [directory]
 read_only = ''
 read_only_style = 'bold red'
