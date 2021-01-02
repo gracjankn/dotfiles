@@ -16,4 +16,4 @@ sorting:
   
 symlink-arrow: ->
 
-total-size: true
+# total-size: true
