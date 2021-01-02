@@ -1,7 +1,7 @@
 #! /bin/sh
 
 if [ -z "$1" ]; then
-  printf "%s\n" "Usage: app-cleaner.sh /path/to/app.app"
+  printf "%s\n" "Usage: uninstall /path/to/app.app"
   exit 1
 fi
 
@@ -27,7 +27,7 @@ sleep 1
 
 app_name=$(basename $1 .app)
 
-processes=($(pgrep -afil "$app_name" | grep -v "app-cleaner.sh"))
+processes=($(pgrep -afil "$app_name" | grep -v "uninstall"))
 
 if [ ${#processes[@]} -gt 0 ]; then
   printf "%s\n" "${processes[@]}"
@@ -114,8 +114,7 @@ read -r answer
 if [ "$answer" = "y" ]; then
   printf "%s\n" "Moving app data to trash..."
   sleep 1
-  for path in "${paths[@]}"; do
-    osascript -e "tell application \"Finder\" to delete POSIX file \"$path\"" > /dev/null
-  done
+  posixFiles=$(printf ", POSIX file \"%s\"" "${paths[@]}" | awk '{print substr($0,3)}')
+  osascript -e "tell application \"Finder\" to delete { $posixFiles }" > /dev/null
   printf "%s\n" "Done"
 fi
