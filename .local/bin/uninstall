@@ -109,12 +109,8 @@ paths=($(printf "%s\n" "${paths[@]}" | sort -u));
 
 printf "%s\n" "${paths[@]}"
 
-printf "${red}%s${nc}" "Move app data to trash (y or n)? "
-read -r answer
-if [ "$answer" = "y" ]; then
   printf "%s\n" "Moving app data to trash..."
   sleep 1
   posixFiles=$(printf ", POSIX file \"%s\"" "${paths[@]}" | awk '{print substr($0,3)}')
   osascript -e "tell application \"Finder\" to delete { $posixFiles }" > /dev/null
   printf "%s\n" "Done"
-fi
