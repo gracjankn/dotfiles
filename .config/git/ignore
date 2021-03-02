@@ -6,6 +6,7 @@
 .config/nvim/autoload/plug.vim.old
 .config/fish/fish_variables
 .config/karabiner/automatic_backups/
+.config/iterm2/
 .local/share/
 .netrwhist
 .zcompdump
