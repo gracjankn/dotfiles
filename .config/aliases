@@ -1,5 +1,5 @@
 # Basic aliases
-alias ls='lsd -Al'
+alias ls='lsd -ALl'
 alias tree='lsd -A --tree'
 alias rm='rm -Rdf'
 alias v='nvim'
