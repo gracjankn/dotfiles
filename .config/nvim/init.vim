@@ -33,7 +33,7 @@ au VimEnter,VimResume * set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor
   \,sm:block
 au VimLeave,VimSuspend * set guicursor=a:hor100
 
-set autoread | au CursorHold * checktime | call feedkeys("lh") "Auto-refresh files
+" set autoread | au CursorHold * checktime | call feedkeys("lh") "Auto-refresh files
 
 au BufNewFile,BufRead */i3/config set filetype=i3config "Recognize i3 config
 
