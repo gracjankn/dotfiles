@@ -1,5 +1,6 @@
 # Basic aliases
-alias tree='tree -afC'
+alias ls='lsd -Al'
+alias tree='lsd -A --tree'
 alias rm='rm -Rdf'
 alias v='nvim'
 alias vim='nvim'
@@ -10,12 +11,6 @@ alias cat='bat'
 
 # youtube-dl
 alias downloadMP3='youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0'
-
-# ls aliases
-alias ls='lsd -Al'
-alias la='lsd -A' 
-alias ll='lsd -A' 
-alias l.='lsd -a | egrep "^\."'
 
 # navigation
 alias ...='cd ../..'
