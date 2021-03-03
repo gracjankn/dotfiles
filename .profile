@@ -10,6 +10,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 export EDITOR=nvim
 export TERMINAL=st
+export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Display manpages in bat
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
