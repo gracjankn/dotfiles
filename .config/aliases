@@ -47,3 +47,12 @@ alias bh='brew home'
 alias bl='brew list --formula'
 alias bcl='brew list --cask'
 alias br='brew reinstall'
+
+# Brew aliases
+alias ms="mas search"
+alias mi="mas install"
+alias mu='mas uninstall'
+alias md="mas update"
+alias mf='mas info'
+alias mh='mas open'
+alias ml='mas list'
