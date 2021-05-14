@@ -12,6 +12,7 @@ call plug#begin()
 	Plug 'mboughaba/i3config.vim'
 =======
 	Plug 'tpope/vim-commentary' "Comment a line with gcc or visual selection with gc
+<<<<<<< HEAD
 	Plug 'dag/vim-fish' "Syntax for fish config
 	Plug 'mboughaba/i3config.vim' "Syntax for i3 config
 <<<<<<< HEAD
@@ -23,6 +24,12 @@ call plug#begin()
 >>>>>>> 3c62faf (Added toml syntax plugin to NeoVim)
 	Plug 'dracula/vim' "Colorscheme
 >>>>>>> 819138a (Changed NeoVim color scheme to Dracula)
+=======
+	"Plug 'dag/vim-fish' "Syntax for fish config
+	"Plug 'mboughaba/i3config.vim' "Syntax for i3 config
+	Plug 'cespare/vim-toml' "Syntax for toml
+	Plug 'dracula/vim', { 'as': 'dracula' } "Colorscheme
+>>>>>>> 9ef1182 (Fixed folder name for Dracula plugin)
 
 call plug#end()
 
