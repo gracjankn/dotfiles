@@ -35,7 +35,7 @@ call plug#end()
 
 set nu rnu "Hybrid numbers
 set termguicolors "Improve color rendering
-colorscheme dracula "Set color scheme
+" colorscheme dracula "Set color scheme
 set clipboard=unnamedplus "Use system clipboard
 
 <<<<<<< HEAD
