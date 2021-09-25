@@ -2,4 +2,6 @@
 	name = Gracjan
 	email = 60069149+gracjankn@users.noreply.github.com
 [core]
-	editor = nvim
+	editor = /Applications/Komet.app/Contents/MacOS/Komet
+[init]
+	defaultBranch = main
