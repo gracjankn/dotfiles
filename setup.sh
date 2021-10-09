@@ -105,6 +105,13 @@ darwin*)
 		# Allow Help Menu to go behind other windows
 		defaults write com.apple.helpviewer DevMode -bool true
 
+		# Always show proxy icon (restores behavior from before macOS Big Sur)
+		defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
+		# Disable Dock icons bouncing
+		defaults write com.apple.dock no-bouncing -bool false && \
+killall Dock
+
 	# Install Mac packages
 		
 		command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
