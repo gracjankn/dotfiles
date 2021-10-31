@@ -10,6 +10,9 @@ export HISTFILE="$XDG_DATA_HOME"/zsh/history
 # Add my private scripts folder to $PATH
 export PATH=$HOME/.local/bin:$PATH
 
+# Add /usr/loca/sbin to $PATH to resolve Homebrew warning
+export PATH="/usr/local/sbin:$PATH"
+
 # Set default apps
 export EDITOR=nvim
 export TERMINAL=st
