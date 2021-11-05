@@ -1,7 +1,9 @@
 [user]
 	name = Gracjan
-	email = 60069149+gracjankn@users.noreply.github.com
+	email = gracjan@gracjan.xyz
 [core]
 	editor = /Applications/Komet.app/Contents/MacOS/Komet
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
