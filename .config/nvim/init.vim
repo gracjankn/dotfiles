@@ -28,8 +28,12 @@ call plug#begin()
 	"Plug 'dag/vim-fish' "Syntax for fish config
 	"Plug 'mboughaba/i3config.vim' "Syntax for i3 config
 	Plug 'cespare/vim-toml' "Syntax for toml
+<<<<<<< HEAD
 	Plug 'dracula/vim', { 'as': 'dracula' } "Colorscheme
 >>>>>>> 9ef1182 (Fixed folder name for Dracula plugin)
+=======
+	" Plug 'dracula/vim', { 'as': 'dracula' } "Colorscheme
+>>>>>>> 1583553 (Commented out Dracula theme plugin and updated VimPlug)
 
 call plug#end()
 
