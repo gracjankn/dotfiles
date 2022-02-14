@@ -16,10 +16,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Set default apps
 export EDITOR=nvim
-export TERMINAL=st
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Display manpages in bat
-
-export QT_QPA_PLATFORMTHEME=gtk2 # Make QT use the GTK theme
 
 export HOMEBREW_NO_ANALYTICS=1 # Opt-out of Brew's data collection via Google Analytics
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30 # Set the number of days Brew keeps caches
