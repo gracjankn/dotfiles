@@ -1,5 +1,5 @@
 export XDG_CONFIG_HOME=$HOME/.config # Set config directory
-export XDG_CACHE=$HOME/.cache # Set cache directory
+export XDG_CACHE_HOME=$HOME/.cache # Set cache directory
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc # Make NPM respect XDG Base Directory specification
 export LESSHISTFILE="-" # Disable Less history file
 export STARSHIP_CACHE= # Disable Starship prompt cache
