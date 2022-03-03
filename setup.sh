@@ -16,7 +16,7 @@ case "$OSTYPE" in
 darwin*)
 
 	# Set computer name
-	sudo scutil --set ComputerName MacBook;sudo scutil --set HostName MacBook;sudo scutil --set LocalHostName MacBook;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string MacBook
+	sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
 
 	# Set Mac defaults
 		# Finder
