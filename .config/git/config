@@ -2,7 +2,7 @@
 	name = Gracjan
 	email = gracjan@gracjan.xyz
 [core]
-	editor = /Applications/Komet.app/Contents/MacOS/Komet
+	editor = $EDITOR
 [init]
 	defaultBranch = main
 [commit]
