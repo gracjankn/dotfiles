@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $(op item get dvo2bfahpep27tghyelded5wca --field password) | /usr/local/bin/gpg --batch \
+    --no-tty --pinentry-mode loopback --passphrase-fd 0 "$@"

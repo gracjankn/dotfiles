@@ -6,4 +6,6 @@
 [init]
 	defaultBranch = main
 [commit]
-	gpgsign = false
+	gpgsign = true
+[gpg]
+	program = /Users/gracjan/dotfiles/.local/bin/gpg-without-tty
