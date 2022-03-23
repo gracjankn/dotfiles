@@ -33,7 +33,7 @@ alias cfe='$EDITOR $HOME/.zshenv'
 alias sc='source $XDG_CONFIG_HOME/zsh/.zshrc'
 
 alias resetlaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
-alias flushssh='sudo killall -HUP mDNSResponder'
+alias flushdns='sudo killall -HUP mDNSResponder'
 alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor'
 
 # Brew aliases
