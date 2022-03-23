@@ -2,7 +2,6 @@ export XDG_CONFIG_HOME=$HOME/.config # Set config directory
 export XDG_CACHE_HOME=$HOME/.cache # Set cache directory
 export LESSHISTFILE="-" # Disable Less history file
 export STARSHIP_CACHE= # Disable Starship prompt cache
-export GPG_TTY=$(tty)
 
 # Make ZSH respect XDG Base Directory specification (kind of)
 export ZDOTDIR=$HOME/.config/zsh 
