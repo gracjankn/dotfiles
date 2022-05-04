@@ -1,6 +1,7 @@
 [user]
 	name = Gracjan
 	email = gracjan@gracjan.xyz
+	signingkey = 45797D528DC7325A
 [core]
 	editor = $EDITOR
 [init]
