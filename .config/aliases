@@ -38,23 +38,23 @@ alias flushdns='op item get f57ac7kcycjjwo5ympd42xmtuy --field password | sudo -
 alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor'
 
 # Brew aliases
-alias bs="brew search"
-alias bi="brew install"
+alias bs='brew search'
+alias bi='brew install'
 alias bu='brew rm'
 alias bz='brew uninstall --zap'
-alias bd="brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor"
+alias bd='brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor'
 alias bf='brew info'
-alias bcf='brew info --cask '
+alias bcf='brew info --cask'
 alias bh='brew home'
 alias bl='brew list --formula'
 alias bcl='brew list --cask'
 alias br='brew reinstall'
 
 # Brew aliases
-alias ms="mas search"
-alias mi="mas install"
+alias ms='mas search'
+alias mi='mas install'
 alias mu='mas uninstall'
-alias md="mas upgrade"
+alias md='mas upgrade'
 alias mf='mas info'
 alias mh='mas open'
 alias ml='mas list'
