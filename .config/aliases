@@ -58,3 +58,7 @@ alias md='mas upgrade'
 alias mf='mas info'
 alias mh='mas open'
 alias ml='mas list'
+
+# ADB aliases
+alias adblist='adb shell pm list packages'
+alias adbuninstall='adb shell pm uninstall --user 0'
