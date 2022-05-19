@@ -8,7 +8,6 @@
 .config/karabiner/automatic_backups/
 .config/iterm2/
 .config/op
-.config/
 .local/share/
 .netrwhist
 .zcompdump
