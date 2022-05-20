@@ -1,12 +1,10 @@
 [user]
 	name = Gracjan
 	email = gracjan@gracjan.xyz
-	signingkey = 45797D528DC7325A
+	signingkey = F591687415B3AF1B
 [core]
 	editor = $EDITOR
 [init]
 	defaultBranch = main
 [commit]
 	gpgsign = true
-[gpg]
-	program = /Users/gracjan/dotfiles/.local/bin/gpg-without-tty
