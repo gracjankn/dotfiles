@@ -3,6 +3,8 @@ export XDG_CACHE_HOME=$HOME/.cache # Set cache directory
 export LESSHISTFILE="-" # Disable Less history file
 export STARSHIP_CACHE= # Disable Starship prompt cache
 
+export KEYID=F591687415B3AF1B # ID of my GPG key for use in other dotfiles
+
 # Make ZSH respect XDG Base Directory specification (kind of)
 export ZDOTDIR=$HOME/.config/zsh 
 export HISTFILE="$XDG_DATA_HOME"/zsh/history
