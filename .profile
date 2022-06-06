@@ -28,7 +28,6 @@ export HOMEBREW_FORCE_VENDOR_RUBY=1 # Always use brew of version Ruby instead of
 export HOMEBREW_NO_AUTO_UPDATE=1 # Don't automatically run brew update before other brew commands
 export HOMEBREW_NO_COMPAT=1 # Disable all legacy code
 export HOMEBREW_NO_INSTALL_CLEANUP=1 # Don't automatically run brew clean before other brew commands
-export HOMEBREW_UPDATE_REPORT_ONLY_INSTALLED=1 # Don't show updates to not-installed packages when running brew upgrade
 
 # Make ADB respect XDG Base Directory specification
 export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
