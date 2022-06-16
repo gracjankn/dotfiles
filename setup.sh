@@ -64,6 +64,9 @@
 			# Minimize windows into application icon: on
 			defaults write com.apple.dock minimize-to-application -bool true
 
+			# Remove default app icons
+			defaults write com.apple.dock persistent-apps -array
+
 			# Restart Dock
 			killall Dock
 						
