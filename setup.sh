@@ -10,19 +10,14 @@
 	ln -sf "$HOME/dotfiles/.profile" ~
 	ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 
-# OS specific commands
-
-case "$OSTYPE" in
-darwin*)
-
-	# Set computer name
+# Set computer name
 	sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
 
-	# Set Mac defaults
-		# Finder
-		
-			# Show extensions: on
-			defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Set Mac defaults
+	# Finder
+	
+		# Show extensions: on
+		defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 			
 			# Changing file extension warning: off
 			defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -68,14 +63,14 @@ darwin*)
 			
 			# Minimize windows into application icon: on
 			defaults write com.apple.dock minimize-to-application -bool true
-			
+
 			# Restart Dock
 			killall Dock
 						
 
 		# Set interval for checking for updates to one day
 		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-		
+
 		# Enable Subpixel Anti-Aliasing (Font Smoothing)
 		defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
 		
@@ -116,7 +111,7 @@ killall Dock
 		
 		command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		
-		brew bundle --file "$HOME/dotfiles/Brewfile"
+		# brew bundle --file "$HOME/dotfiles/Brewfile"
 
 	# Print warning if csrutil is not enabled
 		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
@@ -130,23 +125,3 @@ killall Dock
 	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
 	sudo pkill -HUP socketfilterfw
-
-;;
-linux*)
-
-if command -v apt >/dev/null 2>&1; then
-
-	packages=(shellcheck)
-	
-	for x in "${packages[@]}"; do
-	
-		command -v "$x" >/dev/null 2>&1 || sudo apt install "$x"
-	
-		command -v nvim >/dev/null 2>&1 || sudo apt install neovim
-	
-	done
-
-fi
-
-;;
-esac
