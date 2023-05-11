@@ -1,10 +1,14 @@
 [user]
 	name = Gracjan
 	email = gracjan@gracjan.xyz
-	signingkey = F591687415B3AF1B
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZ1YW83N+nCWeed4FV9Ly3U4pviBOn5utz6thyumfZX
 [core]
 	editor = $EDITOR
 [init]
 	defaultBranch = main
 [commit]
 	gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
