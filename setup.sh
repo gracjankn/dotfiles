@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Enable FileVault
+[ "$(sudo fdesetup status)" != "FileVault is On." ] && sudo fdesetup enable
+
+# Configure firewall
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
+sudo pkill -HUP socketfilterfw
+
 # Clone git repos
 	[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gracjankn/dotfiles.git
 	[ ! -d "$HOME/.local/share/fsh" ] && git clone https://github.com/zdharma/fast-syntax-highlighting ~/.local/share/fsh
@@ -118,13 +128,3 @@ killall Dock
 
 	# Print warning if csrutil is not enabled
 		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
-	
-	# Enable FileVault
-		[ "$(sudo fdesetup status)" != "FileVault is On." ] && sudo fdesetup enable
-
-	# Configure Firewall
-	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
-	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
-	sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
-	sudo pkill -HUP socketfilterfw
