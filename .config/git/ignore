@@ -9,6 +9,7 @@
 .config/iterm2/
 .config/op
 .local/share/
+.local/state/
 .netrwhist
 .zcompdump
 .zsh_history
