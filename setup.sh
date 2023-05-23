@@ -10,6 +10,19 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
 sudo pkill -HUP socketfilterfw
 
+# Install Homebrew and disable analytics
+command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew analytics off
+
+# Install 1Password
+brew install 1password 1password-cli
+echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
+read
+
+# Install and authenticate GitHub CLI
+brew install gh
+gh auth login -p ssh -h github.com -w
+
 # Clone git repos
 	[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gracjankn/dotfiles.git
 	[ ! -d "$HOME/.local/share/fsh" ] && git clone https://github.com/zdharma/fast-syntax-highlighting ~/.local/share/fsh
@@ -119,12 +132,6 @@ sudo pkill -HUP socketfilterfw
 		# Disable Dock icons bouncing
 		defaults write com.apple.dock no-bouncing -bool false && \
 killall Dock
-
-	# Install Mac packages
-		
-		command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-		
-		# brew bundle --file "$HOME/dotfiles/Brewfile"
 
 	# Print warning if csrutil is not enabled
 		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
