@@ -39,7 +39,7 @@ ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 [ ! -d "$HOME/.local/share/fsh" ] && gh repo clone zdharma/fast-syntax-highlighting ~/.local/share/fsh
 
 # Set computer name
-	sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
+sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
 
 # Set Mac defaults
 	# Finder
@@ -47,11 +47,11 @@ ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 		# Show extensions: on
 		defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 			
-			# Changing file extension warning: off
-			defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+		# Changing file extension warning: off
+		defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 			
-			# Restart Finder
-			killall Finder
+		# Restart Finder
+		killall Finder
 		
 		# Disable shadow for screenshots
 		defaults write com.apple.screencapture disable-sfhadow -bool true
@@ -68,75 +68,74 @@ ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 		# Disable blinking cursor
 		defaults write -g NSTextInsertionPointBlinkPeriodOn -float 99999999;defaults write -g NSTextInsertionPointBlinkPeriodOff -float 99999999
 
-		# Dock
+	# Dock
 			
-			# Position: left
-			defaults write com.apple.dock orientation -string left
-			
-			# Icon size: 48
-			defaults write com.apple.dock tilesize -int 48
-			
-			# Autohide: on
-			defaults write com.apple.dock autohide -bool true
-			
-			# Autohide animation time: 0
-			defaults write com.apple.dock autohide-time-modifier -float 0
-			
-			# Autohide delay: 0
-			
-			defaults write com.apple.Dock autohide-delay -float 0
-			
-			# Show recents: off
-			defaults write com.apple.dock show-recents -bool false
-			
-			# Minimize windows into application icon: on
-			defaults write com.apple.dock minimize-to-application -bool true
-
-			# Remove default app icons
-			defaults write com.apple.dock persistent-apps -array
-
-			# Restart Dock
-			killall Dock
-						
-
-		# Set interval for checking for updates to one day
-		defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-		# Enable Subpixel Anti-Aliasing (Font Smoothing)
-		defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+		# Position: left
+		defaults write com.apple.dock orientation -string left
 		
-		# Use plain text mode as default in TextEdit
-		defaults write com.apple.TextEdit RichText -int 0
+		# Icon size: 48
+		defaults write com.apple.dock tilesize -int 48
 		
-		# Quit printer app after print jobs complete
-		defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+		# Autohide: on
+		defaults write com.apple.dock autohide -bool true
 		
-		# iTerm: specify the preferences directory
-		defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+		# Autohide animation time: 0
+		defaults write com.apple.dock autohide-time-modifier -float 0
 		
-		# Safari
-			
-			# Google Safe Browsing: off
-			defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false
-			
-			# Quick Website Search: off
-			defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
-			
-		# Disable creation of .DS_Store files on external and network volumes
-		defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+		# Autohide delay: 0
 		
-		# Don't offer new disks for Time Machine backup
-		defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+		defaults write com.apple.Dock autohide-delay -float 0
 		
-		# Allow Help Menu to go behind other windows
-		defaults write com.apple.helpviewer DevMode -bool true
-
-		# Always show proxy icon (restores behavior from before macOS Big Sur)
-		defaults write -g NSToolbarTitleViewRolloverDelay -float 0
-
+		# Show recents: off
+		defaults write com.apple.dock show-recents -bool false
+		
+		# Minimize windows into application icon: on
+		defaults write com.apple.dock minimize-to-application -bool true
+		
+		# Remove default app icons
+		defaults write com.apple.dock persistent-apps -array
+		
 		# Disable Dock icons bouncing
 		defaults write com.apple.dock no-bouncing -bool false && \
-killall Dock
+		killall Dock
+		
+		# Restart Dock
+		killall Dock				
 
-	# Print warning if csrutil is not enabled
-		[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
+	# Set interval for checking for updates to one day
+	defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+	
+	# Enable Subpixel Anti-Aliasing (Font Smoothing)
+	defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
+	
+	# Use plain text mode as default in TextEdit
+	defaults write com.apple.TextEdit RichText -int 0
+	
+	# Quit printer app after print jobs complete
+	defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+	
+	# iTerm: specify the preferences directory
+	defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string"$XDG_CONFIG_HOME/iterm";defaults write com.googlecode.iterm2.plistLoadPrefsFromCustomFolder -bool true
+	
+	# Safari
+		
+		# Google Safe Browsing: off
+		defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false
+		
+		# Quick Website Search: off
+		defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
+		
+	# Disable creation of .DS_Store files on external and network volumes
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool truedefaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+	
+	# Don't offer new disks for Time Machine backup
+	defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+	
+	# Allow Help Menu to go behind other windows
+	defaults write com.apple.helpviewer DevMode -bool true
+	
+	# Always show proxy icon (restores behavior from before macOS Big Sur)
+	defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+	
+# Print warning if csrutil is not enabled
+[ "$(csrutil status)" != "System Integrity Protection status: enabled." ] && echo 'System Integrity Protection not enabled'
