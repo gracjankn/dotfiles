@@ -16,6 +16,7 @@ brew analytics off
 
 # Install 1Password
 brew install 1password 1password-cli
+open -a 1Password
 echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
 read
 
