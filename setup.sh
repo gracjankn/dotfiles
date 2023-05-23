@@ -23,15 +23,17 @@ read
 brew install gh
 gh auth login -p ssh -h github.com -w
 
-# Clone git repos
-	[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gracjankn/dotfiles.git
-	[ ! -d "$HOME/.local/share/fsh" ] && git clone https://github.com/zdharma/fast-syntax-highlighting ~/.local/share/fsh
+# Clone dotfiles repo
+[ ! -d "$HOME/dotfiles" ] && gh repo clone gracjankn/dotfiles
 
 # Make symbolic links
-	ln -sf "$HOME/dotfiles/.config" ~
-	ln -sf "$HOME/dotfiles/.local" ~
-	ln -sf "$HOME/dotfiles/.profile" ~
-	ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
+ln -sf "$HOME/dotfiles/.config" ~
+ln -sf "$HOME/dotfiles/.local" ~
+ln -sf "$HOME/dotfiles/.profile" ~
+ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
+
+# Install syntax highlighting for ZSH
+[ ! -d "$HOME/.local/share/fsh" ] && gh repo clone zdharma/fast-syntax-highlighting ~/.local/share/fsh
 
 # Set computer name
 	sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
