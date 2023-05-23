@@ -9,9 +9,3 @@ unsetopt correct_all # No autocorrection
 export PATH=$PATH:/usr/local/sbin
 # Use Homebrew's version of OpenSSH
 export PATH=$(brew --prefix openssh)/bin:$PATH
-
-# Make GPG work with my YubiKey
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
-unset SSH_AGENT_PID
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
