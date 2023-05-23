@@ -28,6 +28,8 @@ gh auth login -p ssh -h github.com -w
 [ ! -d "$HOME/dotfiles" ] && gh repo clone gracjankn/dotfiles
 
 # Make symbolic links
+rm -Rdf "$HOME/.config"
+rm -Rdf "$HOME/.local"
 ln -sf "$HOME/dotfiles/.config" ~
 ln -sf "$HOME/dotfiles/.local" ~
 ln -sf "$HOME/dotfiles/.profile" ~
