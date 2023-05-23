@@ -1,6 +1,5 @@
 .DS_Store
 .config/configstore
-.config/gh
 .config/htop/
 .config/nvim/plugged/
 .config/nvim/autoload/plug.vim.old
