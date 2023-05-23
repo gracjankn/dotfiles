@@ -18,6 +18,7 @@ brew analytics off
 brew install 1password 1password-cli
 open -a 1Password
 echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
+op signin
 read
 
 # Install and authenticate GitHub CLI
