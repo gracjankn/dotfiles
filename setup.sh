@@ -84,7 +84,6 @@ sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverenc
 		defaults write com.apple.dock autohide-time-modifier -float 0
 		
 		# Autohide delay: 0
-		
 		defaults write com.apple.Dock autohide-delay -float 0
 		
 		# Show recents: off
