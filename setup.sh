@@ -10,9 +10,8 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp on
 sudo pkill -HUP socketfilterfw
 
-# Install Homebrew and disable analytics
+# Install Homebrew
 command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew analytics off
 
 # Install 1Password
 brew install 1password 1password-cli

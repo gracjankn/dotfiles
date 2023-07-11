@@ -19,7 +19,6 @@ export PATH="/usr/local/sbin:$PATH"
 export EDITOR=nvim
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Display manpages in bat
 
-export HOMEBREW_NO_ANALYTICS=1 # Opt-out of Brew's data collection via Google Analytics
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=30 # Set the number of days Brew keeps caches
 export HOMEBREW_CURL_RETRIES=1 # Only retry once if running Curl fails
 export HOMEBREW_FORCE_BREWED_CURL=1 # Always use brew of version Curl instead of one provided by the system
