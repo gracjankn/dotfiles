@@ -125,7 +125,7 @@ sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverenc
 		defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 		
 	# Disable creation of .DS_Store files on external and network volumes
-	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool truedefaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 	
 	# Don't offer new disks for Time Machine backup
 	defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
