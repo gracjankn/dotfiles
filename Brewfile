@@ -1,0 +1,7 @@
+brew "starship"
+brew "neovim"
+brew "lsd"
+brew "bat"
+brew "wget"
+cask "1password"
+cask "iterm2"
