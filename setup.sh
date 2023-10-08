@@ -21,7 +21,7 @@ op signin
 read
 
 # Clone dotfiles repo
-[ ! -d "$HOME/dotfiles" ] && gh repo clone gracjankn/dotfiles
+[ ! -d "$HOME/dotfiles" ] && git clone git@github.com:gracjankn/dotfiles.git
 
 # Make symbolic links
 rm -Rdf "$HOME/.config"
@@ -32,7 +32,7 @@ ln -sf "$HOME/dotfiles/.profile" ~
 ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 
 # Install syntax highlighting for ZSH
-[ ! -d "$HOME/.local/share/fsh" ] && gh repo clone zdharma/fast-syntax-highlighting ~/.local/share/fsh
+[ ! -d "$HOME/.local/share/fsh" ] && git clone git@github.com:zdharma/fast-syntax-highlighting.git ~/.local/share/fsh
 
 # Set computer name
 sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
