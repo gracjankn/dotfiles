@@ -14,15 +14,11 @@ sudo pkill -HUP socketfilterfw
 command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install 1Password
-brew install 1password 1password-cli
+brew install 1password
 open -a 1Password
 echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
 op signin
 read
-
-# Install and authenticate GitHub CLI
-brew install gh
-gh auth login -p ssh -h github.com -w
 
 # Clone dotfiles repo
 [ ! -d "$HOME/dotfiles" ] && gh repo clone gracjankn/dotfiles
