@@ -9,4 +9,3 @@ unsetopt correct_all # No autocorrection
 export PATH=$PATH:/usr/local/sbin
 # Use Homebrew's version of OpenSSH
 export PATH=$(brew --prefix openssh)/bin:$PATH
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh # Automatic suggestions from history
