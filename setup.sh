@@ -18,7 +18,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install 1password
 open -a 1Password
 echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
-op signin
 read
 
 # Clone dotfiles repo
