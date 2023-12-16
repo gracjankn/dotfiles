@@ -12,6 +12,7 @@ sudo pkill -HUP socketfilterfw
 
 # Install Homebrew
 command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install 1Password
 brew install 1password
