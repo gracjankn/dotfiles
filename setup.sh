@@ -37,6 +37,9 @@ ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 # Set computer name
 sudo scutil --set ComputerName Rubicon;sudo scutil --set HostName Rubicon;sudo scutil --set LocalHostName Rubicon;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Rubicon
 
+# Get rid of welcome message in terminal
+touch $HOME/.hushlogin
+
 # Set Mac defaults
 	# Finder
 	
