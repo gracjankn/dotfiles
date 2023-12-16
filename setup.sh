@@ -35,7 +35,7 @@ ln -sf "$HOME/dotfiles/.profile" ~/.zshenv
 [ ! -d "$HOME/.local/share/fsh" ] && git clone git@github.com:zdharma/fast-syntax-highlighting.git ~/.local/share/fsh
 
 # Set computer name
-sudo scutil --set ComputerName Deliverence;sudo scutil --set HostName Deliverence;sudo scutil --set LocalHostName Deliverence;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Deliverence
+sudo scutil --set ComputerName Rubicon;sudo scutil --set HostName Rubicon;sudo scutil --set LocalHostName Rubicon;sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string Rubicon
 
 # Set Mac defaults
 	# Finder
