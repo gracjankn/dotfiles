@@ -14,8 +14,10 @@ sudo pkill -HUP socketfilterfw
 command -v brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Install Homebrew packages listed in the Brewfile
+brew bundle --file=$HOME/dotfiles/Brewfile
+
 # Install 1Password
-brew install 1password
 open -a 1Password
 echo "Log in to 1Password and enable the SSH agent in its settings. Press enter when you're done."
 read
