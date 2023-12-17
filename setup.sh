@@ -68,15 +68,6 @@ touch $HOME/.hushlogin
 		defaults write -g NSTextInsertionPointBlinkPeriodOn -float 99999999;defaults write -g NSTextInsertionPointBlinkPeriodOff -float 99999999
 
 	# Dock
-			
-		# Position: left
-		defaults write com.apple.dock orientation -string left
-		
-		# Icon size: 48
-		defaults write com.apple.dock tilesize -int 48
-		
-		# Autohide: on
-		defaults write com.apple.dock autohide -bool true
 		
 		# Autohide animation time: 0
 		defaults write com.apple.dock autohide-time-modifier -float 0
@@ -84,27 +75,11 @@ touch $HOME/.hushlogin
 		# Autohide delay: 0
 		defaults write com.apple.Dock autohide-delay -float 0
 		
-		# Show recents: off
-		defaults write com.apple.dock show-recents -bool false
-		
-		# Minimize windows into application icon: on
-		defaults write com.apple.dock minimize-to-application -bool true
-		
-		# Remove default app icons
-		defaults write com.apple.dock persistent-apps -array
-		
-		# Disable Dock icons bouncing
-		defaults write com.apple.dock no-bouncing -bool false && \
-		killall Dock
-		
 		# Restart Dock
-		killall Dock				
+		killall Dock
 
 	# Set interval for checking for updates to one day
 	defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-	
-	# Enable Subpixel Anti-Aliasing (Font Smoothing)
-	defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
 	
 	# Use plain text mode as default in TextEdit
 	defaults write com.apple.TextEdit RichText -int 0
@@ -119,9 +94,6 @@ touch $HOME/.hushlogin
 		
 		# Google Safe Browsing: off
 		defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool false
-		
-		# Quick Website Search: off
-		defaults write com.apple.Safari WebsiteSpecificSearchEnabled -bool false
 		
 	# Disable creation of .DS_Store files on external and network volumes
 	defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
