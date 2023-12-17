@@ -16,6 +16,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Homebrew packages listed in the Brewfile
 brew bundle --file=$HOME/dotfiles/Brewfile
+rm $HOME/dotfiles/Brewfile.lock.json
 
 # Install 1Password
 open -a 1Password
