@@ -17,3 +17,6 @@ sorting:
 symlink-arrow: ->
 
 # total-size: true
+
+icons:
+  when: never
