@@ -7,7 +7,6 @@ call plug#begin()
 call plug#end()
 
 set nu rnu "Hybrid numbers
-set termguicolors "Improve color rendering
 set clipboard=unnamedplus "Use system clipboard
 
 "Custom status bar - left side
