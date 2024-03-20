@@ -12,28 +12,18 @@ alias cat='bat'
 # youtube-dl
 alias downloadMP3='youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0'
 
-# navigation
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../..'
-alias .5='cd ../../../..'
-alias .6='cd ../../../../..'
-
 # Config aliases
 alias cfz='$EDITOR $XDG_CONFIG_HOME/zsh/.zshrc'
 alias cfs='$EDITOR $XDG_CONFIG_HOME/starship.toml'
 alias cfp='$EDITOR $HOME/.profile'
 alias cfg='$EDITOR $XDG_CONFIG_HOME/git/config'
-alias cff='$EDITOR $XDG_CONFIG_HOME/fish/config.fish'
 alias cfa='$EDITOR $XDG_CONFIG_HOME/aliases'
 alias cfv='$EDITOR $XDG_CONFIG_HOME/nvim/init.vim'
-alias cfi='$EDITOR $XDG_CONFIG_HOME/i3/config'
 alias cfe='$EDITOR $HOME/.zshenv'
 alias sc='source $XDG_CONFIG_HOME/zsh/.zshrc'
 
 alias resetlaunchpad='defaults write com.apple.dock ResetLaunchPad -bool true;killall Dock'
 alias flushdns='sudo killall -HUP mDNSResponder'
-alias update='sudo softwareupdate -ia —verbose;mas upgrade;brew update;brew upgrade;brew cleanup;brew autoremove;brew doctor'
 
 # Brew aliases
 alias bs='brew search'
